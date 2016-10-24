@@ -1,0 +1,113 @@
+extends partials/base
+
+block title
+	-var titulo = "index";
+	title index
+
+block content
+	div.cont-alerts-HB.hiden
+		p.texto-alertas
+			|Buenas por aquí ando
+
+
+	div.rayo
+		img(src="images/Img-Rayo.png", alt="")
+
+
+	div.rayo-A
+		img(src="images/Img-RayoA.png", alt="")
+
+	section.cont-bienvenida-H
+		div.row
+
+			div.cont-titulos-HW
+				h1 
+					|Corre ya por tu celular, 
+
+				em.subtitulo-principal
+
+					|lo necesitarás para jugar y encontrar...
+
+			
+			div.conte-BBB-LogoH
+				img.img-responsive(src="images/Img-BBBLogo.png", alt="")
+
+			div.cont-nombre-hallowen
+				img.img-responsive(src="images/Img-LogoHallow.png", alt="El dulce más buscado")
+
+			div.conte-btn-jugarH#btn-jugar
+				img.img-responsive(src="images/Img-PlayH.png", alt="Jugar")
+				p.text-btn-jugar
+					|Jugar
+
+	section.cont-tipo-registro.hiden
+		div.row
+
+			div.cont-titulos-HW
+				h1.
+					 	Corre ya por tu celular, 
+
+				em.subtitulo-principal.
+
+					lo necesitarás para jugar y encontrar...
+
+			div.cont-fondo-G
+				div.cont-cajaG-Iz
+					img(src="images/Img-cajaG1.png")
+
+				div.cont-cajaG-Center
+					h2.titulo-registro-Prin.
+						 ¿Ya estás registrado?
+
+					div.cont-regis-confirmacion
+						h3.titulo-registrados.si-regis.
+							Si
+
+						form
+							label(for="E-mail").
+								E-mail
+							input.datos-login(type="text" id="user")
+							div.clear
+							label(for="Contraseña").
+								Contraseña
+							input.datos-login(type="password" id="password")
+							
+							input(type="button" id="btn-login" value="Aceptar")
+
+							div.clear
+
+							em.diferen-registro.
+								ó
+							div.clear
+
+							label.face-connect(for="ConectarconFacebook").
+								Conectar con fACEBOOK
+							
+							button.conect-facebook
+								img.img-responsive(src="images/Img-LogoFb.png", alt="Jugar")
+
+						em.inform-princi.
+							 Ingresa para continuar acumulando bon bon bum y llegar al primer puesto en la tabla de posiciones.
+
+					div.division-form-L
+					div.cont-regis-confirmacion#btn-no-register
+						h3.titulo-registrados.no-regis.
+							No
+
+						div.conte-btn-jugar
+							a(href="#")
+								img.img-responsive(src="images/Img-PlayHN.png", alt="Jugar")
+
+								p.text-btn-jugarII.
+									Jugar
+
+						em.inform-princi.
+							 No esperes más y comienza a perseguir el dulce más buscado.
+
+
+				div.cont-cajaG-Der
+					img(src="images/Img-cajaG2.png")
+					
+
+block Scripts
+	script(type="text/javascript",src="js/index.min.js")

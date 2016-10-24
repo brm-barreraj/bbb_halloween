@@ -1,0 +1,55 @@
+<html>
+<head>
+	<title>form de registro </title>
+	<script  src="js/jquery-1.9.0.js"></script>
+	<script  src="js/jquery.validate.js"></script>
+	<script  src="js/validacion.js"></script>
+
+</head>
+<body>
+	<form id="formRegistro">
+		nombre: <input type="text" name="nombre" id="nombre" value="{#$nombre#}"><br>
+		apellido: <input type="text" name="apellido" id="apellido" value="{#$apellido#}"><br>
+		fecha de nacimiento: <input type="date" name="fecha" id="fecha"><br>
+		numero de cedula: <input type="text" name="cedula" id="cedula"><br>
+		correo electronico: <input type="text" name="email" value="{#$email#}" id="email"><br>
+		celular: <input type="text" name="celular" id="celular" value="{#$celular#}"><br>
+		pais:<select name="pais" id="pais" value="{#$pais#}">
+			<option value="">opciones....</option>
+			<option value="7">Pais de mier</option>
+
+		</select><br>
+		ciudad:<select name="ciudad" id="ciudad" value="{#$ciudad#}">
+			<option value="">opciones....</option>
+			<option value="7">Ciudad de mier</option>
+
+		</select><br>
+		{#if $sexo == 'M'#}
+		genero:<input type="radio" value="M" name="sexo"  checked>Masculino
+		<input type="radio" value="F" name="sexo">Femenino<br>
+		{#elseif $sexo == 'F'#}
+		genero:<input type="radio" value="M" name="sexo">Masculino
+		<input type="radio" value="F" name="sexo" checked>Femenino<br>
+		{#else#}
+		genero:<input type="radio" value="M" name="sexo">Masculino
+		<input type="radio" value="F" name="sexo">Femenino<br>
+		{#/if#}
+		
+		acepto <a href="">terminos y condiciones</a> <input type="checkbox" name="terminos" value="S"><br>
+		acepto <a href="">politicas de privacidad</a> <input type="checkbox" name="politica" value="S"><br>
+		deseo recibir newsletters <input type="checkbox" name="newsletter" value="S"><br>
+	</form>
+		<button id="enviar">Registrar</button>
+</body>
+</html>
+
+<!-- {#$fbid#} -->
+<!-- {#$email#} -->
+<!-- {#$foto#} -->
+<!-- {#$nombre#} -->
+<!-- {#$apellido#} -->
+<!-- {#$sexo#} -->
+<!-- {#$celular#} -->
+<!-- {#$pais#} -->
+<!-- {#$ciudad#} -->
+

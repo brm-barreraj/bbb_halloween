@@ -1,0 +1,397 @@
+extends partials/base
+
+block title
+	-var titulo = "Juego";
+	title Juego
+
+block content
+
+	div.cont-alerts-HB.hiden
+		p.texto-alertas
+			|Buenas por aquí ando
+
+	div.rayoJ
+		img(src="images/Img-Rayo.png")
+
+	div.rayo-A
+		img(src="images/Img-RayoA.png")
+	
+	div.time.hiden
+		span#time-text
+
+	section.cont-sync-actividad
+		div.cont-titulos-svg
+
+			include partials/Sync-text
+		div.row
+			div.cont-cajaD
+				div.cont-cajaDS-Iz
+					img(src="images/Img-cajaGD1.png")
+
+				div.cont-cajaDS-Center
+					div
+					h3.pasos-int-sync
+						|1. ingresa a la siguente url desde tu dispositivo móvil.
+					img.img-sync-cel(src="images/Img-SyncCel.png", alt="")
+
+				div.cont-cajaDS-Der
+					img(src="images/Img-cajaGD2.png")
+
+		div.row.paso2-sync
+			div.cont-cajaD
+				div.cont-cajaDS-Iz
+					img(src="images/Img-cajaGD1B.png")
+
+				div.cont-cajaDS2-Center
+					div
+					h3.pasos-int-syncII
+						|2. ingresa este código.
+
+					div.cont-codigo-sync
+					
+						input.codigo.sync#codeWeb(type="text",disabled="disabled")
+
+				div.cont-cajaDS-Der
+					img(src="images/Img-cajaGD2B.png")
+
+	section.cont-info-camino.hiden
+		div.row
+			div.cont-caja-titulos
+				div.cont-titulos-Izq
+					img(src="images/Img-cajaP1.png")
+
+				div.cont-titulos-Center
+					h4.titulos-infor-juego#title-walk
+
+				div.cont-titulos-Der
+					img(src="images/Img-cajaP2.png")
+			div.clear
+
+			
+			div.cont-barra-progreso.container
+				div.progress.vertical
+					div.progress-bar.progress-bar-info(role="progressbar",aria-valuenow="90",aria-valuemin="0",aria-valuemax="100",style="width: 0%;")
+
+			div.contador-BBB-totales
+				div
+					img.img-responsive(src="images/Img-BBBContador.png", alt="")
+				
+				div.cont-text-contador
+					p.cont-BBBH
+						|0
+
+			div.clear
+			div.caja-instr-juegoH.hiden
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-Cen
+					h5.titulos-infor-juego
+
+							|Tienes 15 segundos<br> ¿estás listo?
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+
+			div.cont-sprite-caminar
+
+	section.cont-info-puerta.hiden
+		div.row
+			div.cont-caja-titulos
+				div.cont-titulos-Izq
+					img(src="images/Img-cajaP1.png")
+
+				div.cont-titulos-Center
+					h4.titulos-infor-juego#title-door
+
+				div.cont-titulos-Der
+					img(src="images/Img-cajaP2.png")
+			div.clear
+
+			
+			div.cont-barra-progreso.container
+				div.progress.vertical
+					div.progress-bar.progress-bar-info(role="progressbar",aria-valuenow="90",aria-valuemin="0",aria-valuemax="100",style="width: 0%;")
+
+			div.contador-BBB-totales
+				div
+					img.img-responsive(src="images/Img-BBBContador.png", alt="")
+				
+				div.cont-text-contador
+					p.cont-BBBH.
+						0
+		
+			span.Toc-TocS1.hiden
+				|Toc
+			
+			span.Toc-TocS2.hiden
+				|Toc
+			
+			span.Toc-TocS3.hiden
+				|Toc
+			span.Toc-TocS4.hiden
+				|Toc
+
+			div.clear
+			div.caja-instr-juegoH.hiden
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-Cen
+					h5.titulos-infor-juego.
+
+							Tienes 15 segundos<br> ¿estás listo?
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+
+			div.cont-sprite-puerta
+
+	section.cont-info-dracula.hiden
+		div.cont-titulos-svgII
+			img(src="images/Img-titulo-dracula.png")
+		div.row
+			div.cont-caja-titulos
+				div.cont-titulos-Izq
+					img(src="images/Img-cajaP1.png")
+
+				div.cont-titulos-Center
+					h4.titulos-infor-juego
+						|¡Lánzale ajos para destruirlo y quítale todos sus bon bon bum!
+
+				div.cont-titulos-Der
+					img(src="images/Img-cajaP2.png")
+			div.clear
+			
+			div.cont-GDracula#character-throw
+				img#dracula1.img-responsive(src="images/dracula-1.png")
+				img#dracula2.hiden.img-responsive(src="images/dracula-2.png")
+			
+			div.cont-WAjos#object-throw
+				img.img-responsive(src="images/Img-AjosMobile.png")
+				
+			div.cont-barra-progreso.container
+				div.progress.vertical
+					div.progress-bar.progress-bar-info(role="progressbar",aria-valuenow="90",aria-valuemin="0",aria-valuemax="100",style="width: 0%;")
+
+			div.contador-BBB-totales
+				div
+					img.img-responsive(src="images/Img-BBBContador.png", alt="")
+				
+				div.cont-text-contador
+					p.cont-BBBH
+						|0
+						
+			div.clear
+			div.caja-instr-juegoH#info-time-dracula
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-Cen
+					h5.titulos-infor-juego.
+
+							Tienes 15 segundos<br> ¿estás listo?
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+
+			div.cont-sprite-dracula
+
+	section.cont-formulario-registro.hiden
+		div.cont-titulos-HW
+			h1.titulo-form
+				|¡Derrotaste a Drácula! pero esto es sólo el comienzo.
+			em.subtitulo-form
+				|Regístrate para conocer los desafíos que te esperan... 
+		div.cont-fondo-G
+			div.cont-cajaG-Iz
+		
+					img(src="images/Img-cajaG1.png")
+
+			div.cont-cajaG-Center
+				form.registro-finalH#form-regiter
+					div.cont-form-registroH
+						h2
+							|Datos Acudiente
+
+						input(type="text",placeholder="Nombres",name="nombreAcudiente",id="nombreAcudiente")
+						input(type="text",placeholder="Apellidos",name="apellidoAcudiente",id="apellidoAcudiente")
+						select.hide(name="tipoDocumentoAcudiente",id="tipoDocumentoAcudiente")
+							option(value="CC")
+								|Tipo de documento
+								CC
+						input(type="text",placeholder="Número Documento",name="documentoAcudiente",id="documentoAcudiente")
+						select(name="departamento",id="departamento")
+							option(value="0")
+								|Departamento
+							|{#foreach from=$departamentos item=dpto#}
+							|{#$idDpto = $dpto->id#}
+							option(value="{#$idDpto#}")
+								|{#$dpto->nombre#}
+							|{#/foreach#}
+						select(name="idCiudadAcudiente",id="idCiudadAcudiente",disabled="disabled")
+							option(value="")
+								|Ciudad
+						input(type="text",placeholder="Correo Electrónico",name="correoAcudiente",id="correoAcudiente")
+						input(type="text",placeholder="Número telefonico",name="telefonoAcudiente",id="telefonoAcudiente")
+						input(type="text",placeholder="Dirección residencia",name="direccionAcudiente",id="direccionAcudiente")
+
+					div.division-form-L
+
+					divc.cont-form-registroH
+						h2.
+							Datos participante
+
+						label.face-connect(for="ConectarconFacebook").hiden.
+							Conectar con fACEBOOK
+							
+						button.conect-facebook.hiden
+							img.img-responsive(src="images/Img-LogoFb.png", alt="Jugar")
+
+						input(type="text",placeholder="Nombres",name="nombreParticipante",id="nombreParticipante")
+						input(type="text",placeholder="Apellidos",name="apellidoParticipante",id="apellidoParticipante")
+						input(type="text",placeholder="Correo Electrónico",name="correoParticipante",id="correoParticipante")
+						input(type="text",placeholder="Número telefonico",name="telefonoParticipante",id="telefonoParticipante")
+						input(type="text",placeholder="Nickname",name="apodo",id="apodo")
+						input(type="text",placeholder="Contraseña",name="contrasenia",id="contrasenia")
+
+						div
+							input.check-terminos(type="checkbox",id="terms")
+							p
+								|Acepto los
+								a(href="./documents/terminosycondiciones.pdf")(target="_blank") |términos y condiciones
+						div.clear
+						div
+							input.check-terminos(type="checkbox")
+							p
+								|Soy menor de edad y cuento con la autorización de mi representante legal.
+
+						input#btn-register.btn-enviar-regis(type="button", value="enviar")
+
+			div.cont-cajaG-Der
+				img(src="images/Img-cajaG2.png")
+
+	section.cont-info-bruja.hiden
+		div.cont-titulos-svgII
+			img(src="images/Img-titulo-bruja.png")
+		div.row
+			div.cont-caja-titulos
+				div.cont-titulos-Izq
+					img(src="images/Img-cajaP1.png")
+
+				div.cont-titulos-Center
+					h4.titulos-infor-juego
+						|Usa la escoba y liempia el mal que hay en su interior y quitale sus dulces.
+
+				div.cont-titulos-Der
+					img(src="images/Img-cajaP2.png")
+			div.clear
+			
+			div.cont-GBruja#character-hit
+				img#bruja1.img-responsive(src="images/bruja-1.png")
+				img#bruja2.hiden.img-responsive(src="images/bruja-2.png")
+			
+			div.cont-WEscoba#object-hit
+				img.img-responsive(src="images/Img-EscobaMobile.png")
+			
+			div.cont-barra-progreso.container
+				div.progress.vertical
+					div.progress-bar.progress-bar-info(role="progressbar",aria-valuenow="90",aria-valuemin="0",aria-valuemax="100",style="width: 0%;")
+
+			div.contador-BBB-totales
+				div
+					img.img-responsive(src="images/Img-BBBContador.png", alt="")
+				
+				div.cont-text-contador
+					p.cont-BBBH
+						|0
+
+			div.clear
+			div.caja-instr-juegoH#info-time-bruja
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-Cen
+					h5.titulos-infor-juego
+
+							|Tienes 15 segundos<br> ¿estás listo?
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+
+			div.cont-sprite-bruja
+
+	section.cont-info-fantasma.hiden
+		div.cont-titulos-svgII
+			img(src="images/Img-titulo-Fantasma.png")
+		div.row
+			div.cont-caja-titulos
+				div.cont-titulos-Izq
+					img(src="images/Img-cajaP1.png")
+
+				div.cont-titulos-Center
+					h4.titulos-infor-juego
+						|sacude tu celular, no te quedes paralizado. haz que tire todos los duces que tenga.
+
+				div.cont-titulos-Der
+					img(src="images/Img-cajaP2.png")
+			div.clear
+
+			div.cont-GFantasma#img-opacity
+				img.img-responsive(src="images/Img-Fantasma.png")
+			
+			div.cont-barra-progreso.container
+				div.progress.vertical
+					div.progress-bar.progress-bar-info(role="progressbar",aria-valuenow="90",aria-valuemin="0",aria-valuemax="100",style="width: 0%;")
+
+			div.contador-BBB-totales
+				div
+					img.img-responsive(src="images/Img-BBBContador.png", alt="")
+				
+				div.cont-text-contador
+					p.cont-BBBH
+						|0
+
+
+			div.clear
+			div.caja-instr-juegoH#info-time-fantasma
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-Cen
+					h5.titulos-infor-juego
+
+							|Tienes 15 segundos<br> ¿estás listo?
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+
+			div.cont-sprite-fantasma
+
+	section.cont-cargador.hiden
+		div.row
+		
+			div.cont-tips-juego.hiden
+				h2
+					|tu obetivo es reunir todos los bon bon bum que puedas.
+
+			div.cont-logo-Carga.hiden
+				img.img-responsive(src="images/Img-LogoHallowBBB.png")
+
+			div.mano-cargador
+				img(src="images/Img-ManoLoading.png", alt="")
+
+			div.cont-porcentaje-carga
+				h3
+
+
+block Scripts
+	script(type="text/javascript",src="js/canvasweb.min.js")
+	script(type="text/javascript",src="js/actionsweb.min.js")
+	script(type="text/javascript",src="js/clientweb.min.js")
+	script(type="text/javascript",src="js/eventsweb.min.js")

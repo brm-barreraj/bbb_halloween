@@ -1,0 +1,25 @@
+{
+  "name": "grunt",
+  "version": "1.0.0",
+  "description": "Compila tareas Html, Js, Css",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt": "^0.4.5",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-run": "^0.4.0",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-cssmin": "^1.0.2"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julian Barrera",
+  "license": "ISC"
+}

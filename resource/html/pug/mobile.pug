@@ -1,0 +1,198 @@
+extends partials/base
+
+block title
+	-var titulo = "Mobile";
+	title Mobile
+
+block Styles
+	link(rel='stylesheet', href='css/gestos-syn-mobile.min.css')
+
+block content
+
+	div.cont-alerts-HB.hiden
+		p.texto-alertas
+			|Buenas por aquí ando
+
+	div.rayo-C
+		img(src="images/Img-RayoA.png", alt="")
+
+	section.cont-Sync
+		div.caja-Sync-juegoHB
+			div.cont-Sync-Izq
+				img.img-responsive(src="images/Img-cajaM1.png")
+
+			div.cont-Sync-Cen
+				h5.titulos-infor-juego
+
+							|ingresa el código que aparece en la pantalla, y empieza a jugar
+
+				input.codigo-sync#codeMobile(type="number",maxlength="5")
+
+			div.cont-Sync-Der
+				img.img-responsive(src="images/Img-cajaM2.png")
+
+	section.con-caminar.hiden
+		div.caja-instr-juegoHB
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-CenHB2
+					h5.titulos-infor-juego
+
+							|USA TUS DEDOS PARA DAR CADA PASO
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+		div.cont-item-Def.cont-pasos.pos-2.pie-dere#foot1
+			img.img-responsive(src="images/Img-FDer.png")
+
+		div.cont-item-Def.cont-pasos.pos-1.pie-izq#foot2
+			img.img-responsive(src="images/Img-FIzq.png")
+
+		div.cont-spriteM-caminar
+
+	section.con-puerta.hiden
+		
+		div.caja-instr-juegoHB
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-CenHB2
+					h5.titulos-infor-juego
+
+							|toca la pantalla hasta que se abra la puerta
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+		div.cont-item-Def.pos-1#door-tap
+			img(src="images/Img-ManijaMobile.png", alt="")
+
+		div.cont-spriteM-puertaM
+
+	section.con-play-action.hiden
+		div.caja-instr-juegoHB
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-CenHB2
+					h5.titulos-infor-juego
+
+						|Dale en iniciar para continuar
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+		button.btn-iniciarJ#btn-init-throw
+
+			div.caja-button-juegoHB
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-btn-CenHB2
+					h5.titulos-boton
+
+							|iniciar
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+	section.con-dracula.hiden
+		div.caja-instr-juegoHB
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-CenHB2
+					h5.titulos-infor-juego
+
+						|desliza tu dedo y apunta bien, buena suerte	
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+		div#throw-swipe.cont-item-Def.pos-2
+			img(src="images/Img-AjosMobile.png")
+
+		div.cont-spriteM-dracula
+
+	section.con-bruja.hiden
+		div.caja-instr-juegoHB
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-instrc-CenHB2
+					h5.titulos-infor-juego
+
+							|mueve la escoba de lado a lado con  tus dedos.
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+		
+		div.cont-item-Def.pos-2.hiden
+		div#broom-swipe
+			img.img-responsive(src="images/Img-EscobaMobile.png")
+
+		div.cont-spriteM-bruja
+
+	section.con-fantasma.hiden
+		div.caja-instr-juegoHB
+			div.cont-instrc-Izq
+				img(src="images/Img-cajaP1B.png")
+
+			div.cont-instrc-CenHB2
+				h5.titulos-infor-juego
+
+						|sacude tu celular y haz que el fantasma desaparezca
+
+			div.cont-instrc-Der
+				img(src="images/Img-cajaP2B.png")
+
+		button.btn-iniciarJ
+
+			div.caja-button-juegoHB
+				div.cont-instrc-Izq
+					img(src="images/Img-cajaP1B.png")
+
+				div.cont-btn-CenHB2
+					h5.titulos-boton
+
+							|iniciar
+
+				div.cont-instrc-Der
+					img(src="images/Img-cajaP2B.png")
+
+		div.cont-spriteM-fantasma
+
+	section.cont-cargador.hiden
+		div.row
+			div.cont-tips-juegoM.hiden
+				h2
+					|tu objetivo es reunir todos los bon bon bum que puedas.
+
+			div.cont-logo-CargaII.hiden
+				img.img-responsive(src="images/Img-LogoHallowBBB.png")
+
+			div.mano-cargador
+				img(src="images/Img-ManoLoading.png")
+
+			div.cont-porcentaje-carga
+				h3
+					|100
+		
+	section.con-Restric.hiden
+		div.caja-Sync-juegoHB
+			div.cont-Sync-Izq
+				img.img-responsive(src="images/Img-cajaM1.png")
+			div.cont-Sync-Cen
+				|necesitas registrarte desde tu computador jugando
+			div.cont-Sync-Der
+				img.img-responsive(src="images/Img-cajaM2.png")
+
+			
+block Scripts
+	script(type="text/javascript",src="js/libs/hammer.min.js")
+	script(type="text/javascript",src="js/libs/shake.min.js")
+	script(type="text/javascript",src="js/actionsmobile.min.js")
+	script(type="text/javascript",src="js/clientmobile.min.js")
+	script(type="text/javascript",src="js/eventsmobile.min.js")

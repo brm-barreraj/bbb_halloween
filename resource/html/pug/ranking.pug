@@ -1,0 +1,67 @@
+extends partials/base
+
+block title
+	-var titulo = "Ranking";
+	title Ranking
+
+block content
+	section
+		div.cont-titulos-HW
+				h1.titulo-ranking.
+					 bien hecho, disfruta del dulce más buscado,
+				em.subtitulo-principal.
+					el delicioso bon bon bum morazulfresh.
+		
+		div.cont-fondo-G(style="margin-top:0px")
+			div.cont-cajaG-Iz
+					img(src="images/Img-cajaG1.png")
+
+			div.cont-cajaG-Center
+				div#position.hiden
+					h2.titulo-posicion-H.
+						tu posición
+	
+					p.text-mi-resultado.
+						69
+
+				div.contenedor-tabla-rank
+
+					table.posiciones-juegoH
+						thead
+							tr
+								th.titulo-apodos.
+									Apodo
+
+								th.titulo-puntos.
+									Puntuación
+						tbody
+							|{#assign var="pos" value="0"#}
+							|{#foreach from=$ranking item=rank#}
+							|{#assign var="apodo" value=$rank->apodo#}
+							|{#assign var="pos" value=$pos+1#}
+							tr(data-apodo="{#$apodo#}",data-pos="{#$pos#}")
+								td.
+									{#$apodo#}
+								td.
+									{#if $rank->puntaje == null#}
+									0
+									{#else#}
+									{#$rank->puntaje#}
+									{#/if#}
+									
+							|{#/foreach#}
+				h2.titulo-fin-rank
+					a(href="./game")
+						|Sigue jugando para acumular más puntos. 
+			div.cont-cajaG-Der
+				img(src="images/Img-cajaG2.png")
+			
+			
+			div.cont-logoH-PeII
+				img.img-responsive(src="images/Img-LogoHallowBBB.png", alt="")
+
+			div.cont-logoBBB-PeII
+				img.img-responsive(src="images/Img-LogoBBB.png", alt="")
+
+block Scripts
+	script(type="text/javascript",src="js/ranking.min.js")

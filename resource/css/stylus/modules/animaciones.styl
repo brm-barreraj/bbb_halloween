@@ -1,0 +1,513 @@
+/* Class Actions */
+/*---- Golpear con los ajos -----*/
+// Inicial
+.throw-character-init
+	transform translate(0px,0px)
+	-webkit-transform translate(0px,0px)
+	-o-transform translate(0px,0px)
+	-moz-transform translate(0px,0px)
+
+@keyframes throw-character-center
+	0%
+		transform translate(0px,0px)
+		-webkit-transform translate(0px,0px)
+		-o-transform translate(0px,0px)
+		-moz-transform translate(0px,0px)
+	100%
+		width 50px
+		transform translate(80px,-400px)
+		-webkit-transform translate(80px,-400px)
+		-o-transform translate(80px,-400px)
+		-moz-transform translate(80px,-400px)
+		opacity 0
+
+.throw-character-center
+	-webkit-animation throw-character-center 1s /* Safari 4+ */
+	-moz-animation throw-character-center 1s /* Fx 5+ */
+	-o-animation throw-character-center 1s /* Opera 12+ */
+	animation throw-character-center 1s /* IE 10+, Fx 29+ */
+
+@keyframes throw-character-right
+	0%
+		transform translate(0px,0px)
+		-webkit-transform translate(0px,0px)
+		-o-transform translate(0px,0px)
+		-moz-transform translate(0px,0px)
+	100%
+		width 50px
+		transform translate(300px,-400px)
+		-webkit-transform translate(300px,-400px)
+		-o-transform translate(300px,-400px)
+		-moz-transform translate(300px,-400px)
+		opacity 0
+
+.throw-character-right
+	-webkit-animation throw-character-right 1s /* Safari 4+ */
+	-moz-animation throw-character-right 1s /* Fx 5+ */
+	-o-animation throw-character-right 1s /* Opera 12+ */
+	animation throw-character-right 1s /* IE 10+, Fx 29+ */
+
+@keyframes throw-character-left
+	0%
+		transform translate(0px,0px)
+		-webkit-transform translate(0px,0px)
+		-o-transform translate(0px,0px)
+		-moz-transform translate(0px,0px)
+	100%
+		width 50px
+		transform translate(-150px,-400px)
+		-webkit-transform translate(-150px,-400px)
+		-o-transform translate(-150px,-400px)
+		-moz-transform translate(-150px,-400px)
+		opacity 0
+
+.throw-character-left
+	-webkit-animation throw-character-left 1s /* Safari 4+ */
+	-moz-animation throw-character-left 1s /* Fx 5+ */
+	-o-animation throw-character-left 1s /* Opera 12+ */
+	animation throw-character-left 1s /* IE 10+, Fx 29+ */
+	
+	
+/*--- Movimiento de Dracula----*/
+@keyframes move-character-init
+	100%
+		transform rotate(0deg)
+		-webkit-transform rotate(0deg)
+		-o-transform rotate(0deg)
+		-moz-transform rotate(0deg)
+		
+.move-character-init
+	-webkit-animation move-character-init 1s /* Safari 4+ */
+	-moz-animation move-character-init 1s /* Fx 5+ */
+	-o-animation move-character-init 1s /* Opera 12+ */
+	animation move-character-init 1s /* IE 10+, Fx 29+ */
+
+@keyframes move-character-center
+	100%
+		transform rotate(0deg)
+		bottom -30%
+		left calc(50% - 450px)
+		-webkit-transform rotate(0deg)
+		-o-transform rotate(0deg)
+		-moz-transform rotate(0deg)
+	
+.move-character-center
+	-webkit-animation move-character-center 1s /* Safari 4+ */
+	-moz-animation move-character-center 1s /* Fx 5+ */
+	-o-animation move-character-center 1s /* Opera 12+ */
+	animation move-character-center 1s /* IE 10+, Fx 29+ */
+
+@keyframes move-character-right
+	100%
+		transform rotate(30deg)
+		bottom -30%
+		left calc(70% - 450px)
+		-webkit-transform rotate(30deg)
+		-o-transform rotate(30deg)
+		-moz-transform rotate(30deg)
+	
+.move-character-right
+	-webkit-animation move-character-right 1s /* Safari 4+ */
+	-moz-animation move-character-right 1s /* Fx 5+ */
+	-o-animation move-character-right 1s /* Opera 12+ */
+	animation move-character-right 1s /* IE 10+, Fx 29+ */
+	
+@keyframes move-character-left
+	100%
+		transform rotate(-30deg)
+		bottom -30%
+		left calc(30% - 450px)
+		-webkit-transform rotate(-30deg)
+		-o-transform rotate(-30deg)
+		-moz-transform rotate(-30deg)
+	
+.move-character-left
+	-webkit-animation move-character-left 1s /* Safari 4+ */
+	-moz-animation move-character-left 1s /* Fx 5+ */
+	-o-animation move-character-left 1s /* Opera 12+ */
+	animation move-character-left 1s /* IE 10+, Fx 29+ */
+	
+/*--*/
+
+/*--- Movimiento de la Bruja----*/
+@keyframes move-character-bruja-init
+	100%
+		transform rotate(0deg)
+		-webkit-transform rotate(0deg)
+		-o-transform rotate(0deg)
+		-moz-transform rotate(0deg)
+		
+.move-character-bruja-init
+	-webkit-animation move-character-bruja-init 1s /* Safari 4+ */
+	-moz-animation move-character-bruja-init 1s /* Fx 5+ */
+	-o-animation move-character-bruja-init 1s /* Opera 12+ */
+	animation move-character-bruja-init 1s /* IE 10+, Fx 29+ */
+
+@keyframes move-character-bruja-center
+	100%
+		transform rotate(0deg)
+		bottom -30%
+		left calc(50% - 274px)
+		-webkit-transform rotate(0deg)
+		-o-transform rotate(0deg)
+		-moz-transform rotate(0deg)
+	
+.move-character-bruja-center
+	-webkit-animation move-character-bruja-center 1s /* Safari 4+ */
+	-moz-animation move-character-bruja-center 1s /* Fx 5+ */
+	-o-animation move-character-bruja-center 1s /* Opera 12+ */
+	animation move-character-bruja-center 1s /* IE 10+, Fx 29+ */
+
+@keyframes move-character-bruja-right
+	100%
+		transform rotate(30deg)
+		bottom -19%
+		left calc(70% - 274px)
+		-webkit-transform rotate(30deg)
+		-o-transform rotate(30deg)
+		-moz-transform rotate(30deg)
+	
+.move-character-bruja-right
+	-webkit-animation move-character-bruja-right 1s /* Safari 4+ */
+	-moz-animation move-character-bruja-right 1s /* Fx 5+ */
+	-o-animation move-character-bruja-right 1s /* Opera 12+ */
+	animation move-character-bruja-right 1s /* IE 10+, Fx 29+ */
+	
+@keyframes move-character-bruja-left
+	100%
+		transform rotate(-30deg)
+		bottom -19%
+		left calc(30% - 274px)
+		-webkit-transform rotate(-30deg)
+		-o-transform rotate(-30deg)
+		-moz-transform rotate(-30deg)
+	
+.move-character-bruja-left
+	-webkit-animation move-character-bruja-left 1s /* Safari 4+ */
+	-moz-animation move-character-bruja-left 1s /* Fx 5+ */
+	-o-animation move-character-bruja-left 1s /* Opera 12+ */
+	animation move-character-bruja-left 1s /* IE 10+, Fx 29+ */
+	
+/*-- Golpear con la escoba */
+
+@keyframes move-object-center
+	100%
+		transform rotate(0deg)
+		-webkit-transform rotate(0deg)
+		-o-transform rotate(0deg)
+		-moz-transform rotate(0deg)
+	
+.move-object-center
+	-webkit-animation move-object-center 1s /* Safari 4+ */
+	-moz-animation move-object-center 1s /* Fx 5+ */
+	-o-animation move-object-center 1s /* Opera 12+ */
+	animation move-object-center 1s /* IE 10+, Fx 29+ */
+
+@keyframes move-object-right
+	100%
+		transform rotate(30deg)
+		left calc(57%)
+		-webkit-transform rotate(50deg)
+		-o-transform rotate(50deg)
+		-moz-transform rotate(50deg)
+	
+.move-object-right
+	-webkit-animation move-object-right 1s /* Safari 4+ */
+	-moz-animation move-object-right 1s /* Fx 5+ */
+	-o-animation move-object-right 1s /* Opera 12+ */
+	animation move-object-right 1s /* IE 10+, Fx 29+ */
+	
+@keyframes move-object-left
+	100%
+		transform rotate(-30deg)
+		left calc(33%)
+		-webkit-transform rotate(-50deg)
+		-o-transform rotate(-50deg)
+		-moz-transform rotate(-50deg)
+	
+.move-object-left
+	-webkit-animation move-object-left 1s /* Safari 4+ */
+	-moz-animation move-object-left 1s /* Fx 5+ */
+	-o-animation move-object-left 1s /* Opera 12+ */
+	animation move-object-left 1s /* IE 10+, Fx 29+ */
+
+
+/*--------------*/
+
+
+
+.rayo
+	animation rayo 3s infinite
+	animation-timing-function ease
+	position absolute
+	width 600px
+	right 0
+	z-index -3
+	top 0
+
+.rayoJ
+	animation rayo 3s infinite
+	animation-timing-function ease
+	position absolute
+	width 400px
+	right 109px
+	z-index -3
+	top 0
+
+.rayo-A
+	animation rayoA 2s infinite
+	animation-timing-function linear
+	position absolute
+	width 600px
+	left -630px
+	z-index -3
+	top 0
+
+.rayo-C
+	animation rayoA 2s infinite
+	animation-timing-function linear
+	position absolute
+	width 300px
+	left -700px
+	z-index -3
+	top -150px
+
+@keyframes rayo
+	0%
+		opacity 0.8
+	25% 
+		opacity 0.3
+	50%	
+		opacity 0.7
+		
+	100%
+		opacity 0
+
+
+@keyframes rayoA
+	0%
+		opacity 0.4
+	25% 
+		opacity 0.3
+	50%	
+		opacity 0.6
+		
+	100%
+		opacity 0
+
+
+.conte-BBB-LogoH
+	left 35%
+	left calc(50% - 150px)
+	position absolute
+	width 30%
+	top 120px
+	animation BBB 2s
+	animation-timing-function ease-out
+
+.cont-nombre-hallowen
+	left 35%
+	left calc(50% - 200px)
+	position absolute
+	width 30%
+	top 350px
+	animation nombre-act 1s
+	animation-timing-function ease-out
+
+@keyframes nombre-act
+	0%
+		top -500px
+	100%
+		top 350px
+
+@keyframes BBB
+	from
+		top -500px
+	to 
+		top 120px
+
+
+.mano-cargador
+	width 489px
+	left calc(50% - 244px)
+	position absolute
+	z-index 1
+	top 0px
+	animation mano 8s
+	animation-timing-function ease-out
+
+@keyframes mano
+	0%
+		top -960px
+	100%
+		top 0px
+
+
+/*BUENAS*/
+
+.cont-sprite-caminar
+	width 140px
+	height 140px
+	background-image url('../images/Sprite-Caminar.png')
+	position absolute
+	bottom 0
+	left calc(50% - 70px)
+	animation caminar 1s steps(2) infinite alternate
+	z-index 20
+
+@keyframes caminar
+	from
+		background-position 0 0
+	to 
+		background-position 300px 0
+
+
+.cont-sprite-puerta
+	width 140px
+	height 140px
+	background-image url('../images/Sprite-Puerta.png')
+	position absolute
+	bottom 0
+	left calc(50% - 70px)
+	animation puerta 1s steps(2) infinite alternate
+	z-index 20
+
+@keyframes puerta
+	from
+		background-position 0 0
+	to 
+		background-position 300px 0
+
+.cont-sprite-dracula
+	width 140px
+	height 140px
+	background-image url('../images/Sprite-Dracula.png')
+	position absolute
+	bottom 0
+	left calc(50% - 70px)
+	animation dracula 1s steps(2) infinite alternate
+	z-index 20
+
+@keyframes dracula
+	from
+		background-position 0 0
+	to 
+		background-position 300px 0
+
+.cont-sprite-bruja
+	width 140px
+	height 140px
+	background-image url('../images/Sprite-Bruja.png')
+	position absolute
+	bottom 0
+	left calc(50% - 70px)
+	animation bruja 1s steps(2) infinite alternate
+	z-index 20
+
+@keyframes bruja
+	from
+		background-position 0 0
+	to 
+		background-position 300px 0
+
+
+.cont-sprite-fantasma
+	width 140px
+	height 140px
+	background-image url('../images/Sprite-Fantasma.png')
+	position absolute
+	bottom 0
+	left calc(50% - 70px)
+	animation fantasma 0.6s steps(2) infinite alternate
+	z-index 20
+	
+@keyframes fantasma
+	from
+		background-position 0 0
+	to 
+		background-position 290px 0
+
+.cont-spriteM-caminar
+	width 80px
+	height 80px
+	background-image url('../images/Sprite-CaminarM.png')
+	position absolute
+	top 24%
+	left calc(50% - 20px)
+	animation caminarM 1s steps(2) infinite alternate
+
+@keyframes caminarM
+	from
+		background-position 0 0
+	to 
+		background-position 160px 0
+
+
+.cont-spriteM-dracula
+	width 80px
+	height 80px
+	background-image url('../images/Sprite-DraculaM.png')
+	position absolute
+	top 24%
+	left calc(50% - 20px)
+	animation draculaM 1s steps(2) infinite alternate
+
+@keyframes draculaM
+	from
+		background-position 0 0
+	to 
+		background-position 160px 0
+
+
+
+.cont-spriteM-bruja
+	width 80px
+	height 80px
+	background-image url('../images/Sprite-BrujaM.png')
+	position absolute
+	top 24%
+	left calc(50% - 20px)
+	animation brujaM 1s steps(2) infinite alternate
+
+@keyframes brujaM
+	from
+		background-position 0 0
+	to 
+		background-position 160px 0
+
+
+
+.cont-spriteM-fantasma
+	width 80px
+	height 80px
+	background-image url('../images/Sprite-FantasmaM.png')
+	position absolute
+	top 24%
+	left calc(50% - 20px)
+	animation fantasmaM 1s steps(2) infinite alternate
+
+@keyframes fantasmaM
+	from
+		background-position 0 0
+	to 
+		background-position 160px 0
+
+
+
+.cont-spriteM-puertaM
+	width 80px
+	height 80px
+	background-image url('../images/Sprite-PuertaM.png')
+	position absolute
+	top 24%
+	left calc(50% - 30px)
+	animation puertaM 1s steps(2) infinite alternate
+
+@keyframes puertaM
+	from
+		background-position 0 0
+	to 
+		background-position 160px 0
+
+
+

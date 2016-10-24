@@ -1,0 +1,476 @@
+/*
+-Deben ser elementos por default que lucirán igual en todo el sitio, Es .
+-Ningún estilo de estos elementos selectores deberá usar !important.
+-No usar selectores tipo class o id.
+*/
+.cont-info-camino
+	height 100%
+	z-index 100
+	position absolute
+	width 100%
+/* Oculta */
+.hiden
+	display none
+.row
+	margin 0
+	padding 0
+	
+.clear
+	clear both	
+	
+ul, ol
+	list-style none
+a
+	text-decoration none 
+	border 0
+	
+	&:hover
+		text-decoration none 
+	
+		
+	img
+		border 0
+		
+body
+	background-size cover
+	background-attachment fixed
+	color $Blanco
+	font-family $Edo
+	font-size 1.3rem
+	overflow hidden !important
+	height 100%
+	
+canvas
+	display block
+	top 0
+	position absolute
+	z-index 10
+    
+.bg-puerta
+	background-image url('../images/Bg-Puerta.png')
+
+.bg-bosque
+	background-image url('../images/Bg-General.jpg')
+
+.bg-ranking
+	background-image url('../images/Bg-Ranking.jpg')
+
+h1, h2, h3
+	font-family $Edo
+	font-size 5rem
+	text-shadow 2px 2px 2px $Negro
+
+p
+	font-family $Edo
+	color $Blanco
+	height 4px
+.clear
+	clear both
+
+section
+	margin-top 2%
+	height 100vh
+
+.cont-titulos-HW
+	margin 50px auto 0
+	width 50%
+	position relative
+	z-index 1
+	text-align center
+	
+	h1
+		margin 0
+		text-shadow 2px 2px 2px $Negro
+	
+	.titulo-ranking
+		font-size 2.7rem
+	
+	.titulo-form
+		font-size 2.3rem
+		
+	
+em.subtitulo-principal
+	font-size 3rem
+	text-shadow 2px 2px 2px $Negro
+
+em.subtitulo-form
+	font-size 2.3rem
+	text-shadow 2px 2px 2px $Negro
+
+h2.titulo-registro-Prin
+	color $Negro
+	font-size 3rem
+	text-align center
+	text-shadow 0px 0px 4px $Naranja
+	margin 8% 0 3%
+
+.division-form-L
+	background-image url('../images/Img-DivisionF.png')
+	background-repeat no-repeat
+	display block
+	float left
+	height 300px
+	margin 5% 8px 0
+	width 18px
+
+h3.pasos-int-sync
+	color $Negro
+	font-size 2.5rem
+	text-align center
+	text-shadow 0px 0px 4px $Naranja
+	margin 53px 0 0
+	width 100%
+
+h3.pasos-int-syncII
+	color $Negro
+	font-size 2.5rem
+	text-align center
+	text-shadow 0px 0px 4px $Naranja
+	margin-left 23%
+	width 55%
+
+.margindiv
+	margin-top 38px
+
+.img-sync-cel
+	margin-left 28%
+
+.cont-codigo-sync
+	background-image url('../images/Img-SyncCelB.png')
+	background-repeat no-repeat
+	display inline-block
+	height 224px
+	margin-left 28%
+	width 234px
+
+h4.titulos-infor-juego
+	color $Negro
+	font-size 2.5rem
+	text-align center
+	margin-top 9%
+
+.container
+	margin-top 40px
+	padding-top 20px
+	
+.cont-barra-progreso
+	float left
+	background-image url('../images/Img-FondoProgress.png')
+	background-repeat no-repeat
+	width 48px
+	height 500px
+	position absolute
+	top 8%
+	left 54px
+	
+.vertical
+	display inline-block
+	width 20%
+	height 40%
+	transform rotate(-90deg)
+	
+.progress-bar
+	box-shadow inset 0px 4px 6px rgba(100,100,100,0.6)
+
+.progress
+	background none
+	height 9px !important
+	left -213px
+	position absolute
+	top 243px
+	width 474px
+
+.progress-bar-info
+	background-color $Blanco
+
+.contador-BBB-totales
+	position absolute
+	top 40%
+	right 70px
+	width 50px
+
+.cont-text-contador
+	background-color $Naranja
+	border 2px solid $Negro
+	border-radius 100%
+	height 40px
+	margin -50px 0 0 7%
+	position absolute
+	text-align center
+	width 40px
+	z-index 1
+
+.cont-BBBH
+	font-size 2.5rem
+	
+.cont-logoH-Pe
+	width 90px
+	position absolute
+	left 32px
+	bottom 4px
+
+.cont-logoBBB-Pe
+	width 90px
+	position absolute
+	right 32px
+	bottom 4px
+	
+.cont-logoH-PeII
+	width 200px
+	position absolute
+	left 32px
+	bottom 4px
+
+.cont-logoBBB-PeII
+	width 200px
+	position absolute
+	right 32px
+	bottom 4px
+
+.cont-titulos-Center
+	background-color rgba(255, 255, 255, 0.5)
+	box-shadow 0 6px 8px -3px $Negro
+	height 137px 
+	margin-top 19px
+	width 42%
+
+.cont-titulos-svg
+	width 650px
+	left calc(50% - 325px)
+	position absolute
+	top 14px
+
+svg#tablet
+	width 620px !important
+
+.cont-titulos-svgII
+	width 312px
+	left calc(50% - 150px)
+	position absolute
+	top 8px
+
+h2.titulo-posicion-H
+	color $Negro
+	text-shadow 0px 0px 2px $Negro
+	text-align center
+	font-family $Edo 
+	font-size 4rem
+	line-height 3.5rem
+	margin 8% 0 0 15%
+	width 45%
+	float left
+
+p.text-mi-resultado
+	color $Blanco
+	text-shadow 0px 0px 2px $Negro
+	font-family $Edo 
+	font-size 4rem
+	width 30%
+	float left
+	margin-top 30px
+
+.contenedor-tabla-rank
+	height 290px
+	overflow-y scroll
+	width 100%
+	margin-top 17%
+
+table.posiciones-juegoH
+	width 100%
+	
+	thead
+		tr
+			th.titulo-apodos
+				color $Negro
+				text-shadow 0px 0px 2px $Rojo
+				font-size 4rem
+				text-align center
+			
+			th.titulo-puntos
+				color $Naranja
+				text-shadow 0px 0px 2px $Negro
+				font-size 4rem
+				text-align center
+	tbody
+		tr
+			td
+				color $Negro
+				font-size 2rem
+				text-align center
+			
+			td.mi-puntaje, td.mi-apodo
+				color $Naranja
+				text-shadow 0px 0px 2px $Negro
+				font-size 2rem
+				text-align center
+
+.titulo-fin-rank
+	font-size 2.5rem
+	margin-top 14px
+	text-align center
+	text-shadow 0px 0px 2px $Negro
+
+
+h5.titulos-infor-juego
+	color $Negro
+	font-size 2.2rem
+	text-align center
+	margin-top 3%
+
+/*PUERTA*/
+.Toc-TocS1
+	font-size 5rem
+	position absolute
+	transform rotate(-21deg)
+	text-shadow 0px 0px 2px $Negro
+	left calc(60% - 39px - 10%)
+	top 60%
+	
+.Toc-TocS2
+	font-size 5rem
+	position absolute
+	transform rotate(21deg)
+	text-shadow 0px 0px 2px $Negro
+	left calc(60% - 39px + 10%)
+	top 40%
+
+.Toc-TocS3
+	font-size 5rem
+	position absolute
+	transform rotate(-21deg)
+	text-shadow 0px 0px 2px $Negro
+	left calc(60% - 39px - 10%)
+	top 34%
+	
+.Toc-TocS4
+	font-size 5rem
+	position absolute
+	transform rotate(21deg)
+	text-shadow 0px 0px 2px $Negro
+	left calc(60% - 39px)
+	top 440px
+
+	
+
+
+/*CAGADOR*/
+
+.cont-tips-juego
+	width 600px
+	margin 0 auto
+	text-align center
+	position relative
+	z-index 2
+	
+	h2
+		font-size 4rem
+	
+.cont-logo-Carga
+	width 300px	
+	margin 42px auto 0%
+	position relative
+	z-index 1
+
+.cont-porcentaje-carga
+	width 150px
+	height 150px
+	border-radius 100%
+	background-color rgba(244, 122, 32, 0.5)
+	box-shadow 0px 0px 0px 5px rgba(0,0,0,0.6)
+	left calc(50% - 75px)
+	position absolute
+	z-index 2
+	top 300px
+	
+	h3
+		color $Blanco
+		font-size 9rem
+		width 75%
+		margin 12% auto 0
+		
+/*ALERTS*/
+
+.cont-alerts-HB
+	background-color rgba(0, 0, 0, 0.6)
+	text-shadow 0px 0px 2px $Negro
+	height 100vh
+	position absolute
+	top 0
+	width 100%
+	z-index 10000
+
+	.texto-alertas
+		font-size 5rem
+		line-height 5rem
+		margin-left 10%
+		margin-top 16%
+		text-align center
+		top 30%
+		width 80%
+		text-shadow 0px 0px 11px $Negro
+
+/*TIMING*/
+
+.time
+	font-size 6rem
+	text-shadow 0 0 2px #000
+	right 2.5%
+	top 12%
+	position absolute
+	//background rgba(244, 122, 32, 0.5)
+	border-radius 120px
+	width 130px
+	height 130px
+	text-align center
+	padding-top 20px
+		
+/*Jefes*/		
+
+.cont-GBruja
+	width 600px
+	left calc(50% - 300px)
+	position absolute
+	bottom -3%
+	z-index 1
+
+.cont-GDracula
+	width 900px
+	left calc(50% - 450px)
+	position absolute
+	bottom -3%
+	z-index 1
+	
+.cont-GFantasma
+	width 900px
+	left calc(50% - 450px)
+	position absolute
+	bottom -60%
+	z-index 1
+
+.cont-WAjos
+	width 200px
+	position absolute
+	left calc(50% - 92px)
+	z-index 19
+	bottom 2%
+	
+.cont-WEscoba
+	width 170px
+	position absolute
+	left calc(50% - 85px)
+	z-index 19
+	bottom -28px	
+
+
+/*MediaQueries*/
+
+@media (max-width: 1920px) and (min-width:1300px)
+	.cont-fondo-G, .cont-cajaD
+		margin-left calc(50% - 550px) !important
+		width 1300px !important
+	
+
+@media (max-width: 1299px) and (min-width:1000px)
+	.cont-fondo-G, .cont-cajaD
+		margin-left calc(50% - 500px) !important
+		width 1000px !important

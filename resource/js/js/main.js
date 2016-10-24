@@ -1,0 +1,54 @@
+(function() {
+  this.Main = (function() {
+    function Main() {
+      this.socket = io.connect('https://sbbb-julian10404.c9users.io');
+      this.stage = 0;
+      this.action = 0;
+      this.interaction = 0;
+      this.codeSynch = 0;
+    }
+
+    Main.prototype.connectSocket = function() {
+      return this.idSocketUser = this.socket.socket.sessionid;
+    };
+
+    Main.prototype.loaderSynchronize = function() {
+      return console.log("Loading...");
+    };
+
+    Main.prototype.getAttrConf = function(attr) {
+      return configStage[this.stage].action[this.action][attr];
+    };
+
+    Main.prototype.getLengthConf = function(key) {
+      var result;
+      switch (key) {
+        case "stage":
+          result = configStage.length;
+          break;
+        case "action":
+          result = configStage[this.stage].action.length;
+      }
+      return result;
+    };
+
+    Main.prototype.increaseStage = function() {
+      this.stage++;
+      this.action = 0;
+      return this.interaction = 0;
+    };
+
+    Main.prototype.increaseAction = function() {
+      this.interaction = 0;
+      return this.action++;
+    };
+
+    Main.prototype.increaseInteraction = function() {
+      return this.interaction++;
+    };
+
+    return Main;
+
+  })();
+
+}).call(this);

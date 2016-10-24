@@ -1,0 +1,27 @@
+//Header
+header.container-fluid
+	div.row
+		div.col-lg-2.col-md-2.col-sm-2.col-xs-4.col-lg-offset-1.col-md-offset-1.col-sm-offset-0.col-xs-offset-0.contene-logo-BBB
+			h1
+				a(href="index.html")
+					+image("logo-BBB.png", "Logo BonBonBum")(class="img-responsive")
+
+		div.col-lg-7.col-md-8.col-sm-10.col-xs-10.col-lg-offset-2.col-md-offset-1.col-sm-offset-0.col-xs-offset-0.conte-menu-BBB
+			include menu.jade
+
+		div.col-sm-12.col-xs-12(style="display:none;")
+			ul#BBB-Mobile-menu
+
+					li
+						a(href="#", onClick="seguimientoEventos('menu-mobile','clic','Productos')").block-center.text-center Productos
+
+					li
+						a(href="noticias.html", onClick="seguimientoEventos('menu-mobile','clic','Noticias')").block-center.text-center Noticias
+
+					li
+						a(href="#", onClick="seguimientoEventos('menu-mobile','clic','Actividades')").block-center.text-center Actividades
+
+					li
+						a(href="#", onClick="seguimientoEventos('menu-mobile','clic','Historia')").block-center.text-center Historia
+
+///-Header

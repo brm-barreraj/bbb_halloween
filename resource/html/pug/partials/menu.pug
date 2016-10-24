@@ -1,0 +1,58 @@
+//Menu
+div.col-lg-12.col-md-12.col-sm-12.col-xs-12.conte-menuBBB
+	nav.bar
+		ul#navegacion.menu-site-BBB.nav.nav-tabs
+
+			if titulo === "Productos"
+				li
+					a.menu-active(href="productos.html", onClick="seguimientoEventos('menu','clic','Productos')").block-center.text-center Sabores
+			else 
+
+				li
+					a(href="productos.html", onClick="seguimientoEventos('menu','clic','Productos')").block-center.text-center Sabores
+
+			if titulo === "Noticias"	
+
+				li
+					a.menu-active(href="noticias.html", onClick="seguimientoEventos('menu','clic','Noticias')").block-center.text-center Noticias
+			else
+
+				li
+					a(href="noticias.html", onClick="seguimientoEventos('menu','clic','Noticias')").block-center.text-center Noticias
+
+			if titulo === "Actividades"
+
+				li
+					a.menu-active(href="#", onClick="seguimientoEventos('menu','clic','Actividades')").block-center.text-center Actividades
+			else
+
+				li
+					a(href="#", onClick="seguimientoEventos('menu','clic','Actividades')").block-center.text-center Actividades
+
+			if titulo === "Historia"
+
+				li
+					a.menu-active(href="historia.html", onClick="seguimientoEventos('menu','clic','Historia')").block-center.text-center Historia
+			else
+
+				li
+					a(href="historia.html", onClick="seguimientoEventos('menu','clic','Historia')").block-center.text-center Historia
+
+						
+				li.cont-bandera
+						a.banderas(href="inicio.html", onClick="seguimientoEventos('menu','clic','Pais')")
+							img.img-bandera.img-responsive(src='/images/img-pin.png')
+
+
+		ul#MenuMobile(style="display:none;")
+
+			li
+				a(href="inicio.html", onClick="seguimientoEventos('header','clic','menu')")
+					img.img-responsive(src='../images/icono-Menu.png')
+
+			li
+				a(href="inicio.html", onClick="seguimientoEventos('menu','clic','Pais')")
+					img.img-bandera.img-responsive(src='/images/img-pin.png')
+
+
+///-Menu

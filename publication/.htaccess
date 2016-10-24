@@ -1,0 +1,9 @@
+Options +FollowSymLinks
+RewriteEngine on
+
+##Ruta base
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+
+#url amigables
+RewriteRule ^([^\.]+)/?$ $1.php [NC,L]

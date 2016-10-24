@@ -1,0 +1,132 @@
+.bg-cont-Home {
+  background-image: url("../images/Bg-Mobile-General.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $Blanco;
+  font-family: $Edo;
+  font-size: 1.3rem;
+  height: 100%;
+  overflow: hidden !important;
+}
+body {
+  background-image: url("../images/Bg-Mobile-Defensa.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $Blanco;
+  font-family: $Edo;
+  font-size: 1.3rem;
+  height: 100%;
+  overflow: hidden !important;
+}
+.bg-cont-Camino {
+  background-image: url("../images/Bg-Mobile-Caminar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $Blanco;
+  font-family: $Edo;
+  font-size: 1.3rem;
+  height: 100%;
+  overflow: hidden !important;
+}
+.cont-logoH-PeB {
+  width: 90px;
+  position: absolute;
+  left: 10px;
+  bottom: 4px;
+}
+.cont-logoBBB-PeB {
+  width: 90px;
+  position: absolute;
+  right: 10px;
+  bottom: 4px;
+}
+.cont-Sync-Cen h5.titulos-infor-juego {
+  margin-top: 25%;
+  font-size: 1.8rem;
+}
+input.codigo-sync {
+  background: none !important;
+  border: 1px dashed $Negro;
+  color: $Negro;
+  text-shadow: 0px 0px 4px $Naranja;
+  float: right;
+  height: 28px;
+  margin-top: 10%;
+  padding: 25px 6px;
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+}
+.cont-instrc-CenHB2 h5 {
+  font-size: 1.3rem;
+}
+section.con-fantasma .caja-instr-juegoHB .cont-instrc-CenHB2 h5 {
+  font-size: 1.4rem;
+  margin-top: 5%;
+}
+section.cont-Restric.ocultar-sec .caja-Sync-juegoHB .cont-Sync-Cen h5.titulos-infor-juego {
+  margin-top: 60%;
+}
+.btn-iniciarJ {
+  background: none;
+  border: none;
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 135px);
+  top: 65%;
+  width: 300px;
+}
+.cont-btn-CenHB2 h5.titulos-boton {
+  margin-top: 20%;
+  font-size: 2.5rem;
+  color: $Negro;
+}
+.pie-izq {
+  left: calc(50% - 128px) !important;
+  width: 140px;
+}
+.cont-item-Def {
+  position: absolute;
+  width: 197px;
+  height: 244px;
+  left: calc(50% - 98px);
+}
+.pos-1 {
+  top: 20%;
+}
+.pos-2 {
+  top: 30%;
+}
+.cont-pasos {
+  float: left;
+}
+.pie-dere {
+  top: 37%;
+  position: absolute;
+  z-index: 20;
+  width: 140px;
+  left: 183px;
+}
+.cont-tips-juegoM {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.cont-tips-juegoM h2 {
+  font-size: 2rem;
+}
+.cont-logo-CargaII {
+  width: 300px;
+  margin: 1px auto 0%;
+  position: relative;
+  z-index: 1;
+}
+.mano-cargador {
+  width: 489%;
+}
+#broom-swipe {
+  margin: 6% 0 0 32%;
+  width: 150px;
+}
