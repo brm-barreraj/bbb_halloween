@@ -1,6 +1,7 @@
 class @Main
 	constructor:->
 		@socket = io.connect 'https://sbbb-julian10404.c9users.io'
+		#@socket = io.connect 'http://104.36.19.174:3000'
 		@stage = 0
 		@action = 0
 		@interaction = 0

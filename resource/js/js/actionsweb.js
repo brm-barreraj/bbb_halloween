@@ -96,31 +96,40 @@
           $(".cont-formulario-registro").show();
           $("#btn-register").click(function() {
             var data, result, stringifyData;
-            if ($("#idCiudadAcudiente").val() === "") {
-              message("Debes seleccionar la ciudad", 2000);
-            } else if ($('#terms').prop('checked') === false) {
-              message("Debes aceptar terminos y condiciones", 2000);
+            if ($("#form-regiter").valid()) {
+              $(".cont-cajaG-Center").css({
+                overflow: "visible"
+              });
+              if ($("#idCiudadAcudiente").val() === "") {
+                message("Debes seleccionar la ciudad", 2000);
+              } else if ($('#terms').prop('checked') === false) {
+                message("Debes aceptar terminos y condiciones", 2000);
+              } else {
+                data = $("#form-regiter").serialize();
+                result = sendAjax("actions.php", "setRegistry", data);
+              }
+              if (result.error === 1) {
+                localStorage.clear();
+                deleteCookie("bbb%h_da/t4");
+                console.log(result, "result");
+                stringifyData = JSON.stringify(result.data);
+                localStorage.setItem('bbb%h_da/t4', stringifyData);
+                setCookie("bbb%h_da/t4", stringifyData, "1");
+                message("Te registraste correctamente, sigue jugando", 3000);
+                return setTimeout(function() {
+                  return ActionsWeb.clientWeb.nextInteraction();
+                }, 2500);
+              } else if (result.error === 2) {
+                return message("El usuario ya existe, por favor intenta de nuevo", 2000);
+              } else if (result.error === 0) {
+                return message("Hay datos vacios, por favor ingresa todos los datos", 2000);
+              } else {
+                return message("Ocurrio un error al registar", 2000);
+              }
             } else {
-              data = $("#form-regiter").serialize();
-              result = sendAjax("actions.php", "setRegistry", data);
-            }
-            if (result.error === 1) {
-              localStorage.clear();
-              deleteCookie("bbb%h_da/t4");
-              console.log(result, "result");
-              stringifyData = JSON.stringify(result.data);
-              localStorage.setItem('bbb%h_da/t4', stringifyData);
-              setCookie("bbb%h_da/t4", stringifyData, "1");
-              message("Te registraste correctamente, sigue jugando", 3000);
-              return setTimeout(function() {
-                return ActionsWeb.clientWeb.nextInteraction();
-              }, 2500);
-            } else if (result.error === 2) {
-              return message("El usuario ya existe, por favor intenta de nuevo", 2000);
-            } else if (result.error === 0) {
-              return message("Hay datos vacios, por favor ingresa todos los datos", 2000);
-            } else {
-              return message("Ocurrio un error al registar", 2000);
+              return $(".cont-cajaG-Center").css({
+                overflow: "scroll"
+              });
             }
           });
           return $("#departamento").change(function() {

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-10-24 19:28:55
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-10-25 00:09:09
          compiled from "./templates/ranking.html" */ ?>
 <?php /*%%SmartyHeaderCode:226342574580be98ac01448-04090136%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'aa82d7164065ff2420699642c0529a5e44e507b6' => 
     array (
       0 => './templates/ranking.html',
-      1 => 1477337315,
+      1 => 1477349662,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_580be98ac0d135_32154792')) {function content_580be98ac0d135_32154792($_smarty_tpl) {?><!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es-CO"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="es-CO"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="es-CO"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="es-CO"> <!--<![endif]--><head><meta charset="utf-8"><title>Ranking</title><meta name="description" content="Meta description Ready"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="css/libs/bootstrap.min.css"><link rel="stylesheet" href="css/libs/animate.min.css"><link rel="stylesheet" href="css/main.min.css"><!-- Web Fonts--><link href="https://fonts.googleapis.com/css?family=Varela+Round|Roboto:400italic,300,700,400" rel="stylesheet" type="text/css"><!--[if lt IE]>
+<!--[if gt IE 8]><!--> <html class="no-js" lang="es-CO"> <!--<![endif]--><head><meta charset="utf-8"><title>El Dulce Más Buscado - Bon Bon Bum</title><meta name="description" content="Meta description Ready"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="css/libs/bootstrap.min.css"><link rel="stylesheet" href="css/libs/animate.min.css"><link rel="stylesheet" href="css/main.min.css"><!-- Web Fonts--><link href="https://fonts.googleapis.com/css?family=Varela+Round|Roboto:400italic,300,700,400" rel="stylesheet" type="text/css"><!--[if lt IE]>
 <?php echo '<script'; ?>
  src="//html5shiv.googlecode.com/svn/trunk/html5.js"><?php echo '</script'; ?>
 >
@@ -63,7 +63,7 @@ $_smarty_tpl->tpl_vars['rank']->_loop = true;
  src="js/libs/bootstrap.min.js"><?php echo '</script'; ?>
 ><?php echo '<script'; ?>
  src="https://sbbb-julian10404.c9users.io/socket.io/socket.io.js"><?php echo '</script'; ?>
-><?php echo '<script'; ?>
+><!--script(src="http://104.36.19.174:3000/socket.io/socket.io.js")--><?php echo '<script'; ?>
  type="text/javascript" src="js/functions.min.js"><?php echo '</script'; ?>
 ><?php echo '<script'; ?>
  type="text/javascript" src="js/config.min.js"><?php echo '</script'; ?>

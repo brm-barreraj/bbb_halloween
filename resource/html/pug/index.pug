@@ -1,18 +1,15 @@
 extends partials/base
 
 block title
-	-var titulo = "index";
-	title index
+	title El Dulce Más Buscado - Bon Bon Bum
 
 block content
 	div.cont-alerts-HB.hiden
 		p.texto-alertas
 			|Buenas por aquí ando
 
-
 	div.rayo
 		img(src="images/Img-Rayo.png", alt="")
-
 
 	div.rayo-A
 		img(src="images/Img-RayoA.png", alt="")
@@ -28,6 +25,28 @@ block content
 
 					|lo necesitarás para jugar y encontrar...
 
+			
+			div.conte-BBB-LogoH
+				img.img-responsive(src="images/Img-BBBLogo.png", alt="")
+
+			div.cont-nombre-hallowen
+				img.img-responsive(src="images/Img-LogoHallow.png", alt="El dulce más buscado")
+
+			div.conte-btn-jugarH#btn-jugar
+				img.img-responsive(src="images/Img-PlayH.png", alt="Jugar")
+				p.text-btn-jugar
+					|Jugar
+					
+	section.cont-bienvenida-H.hidden
+		div.row
+
+			div.cont-titulos-HW
+				h1 
+					|Corre ya por tu celular, 
+
+				em.subtitulo-principal
+
+					|lo necesitarás para jugar y encontrar...
 			
 			div.conte-BBB-LogoH
 				img.img-responsive(src="images/Img-BBBLogo.png", alt="")
@@ -107,7 +126,6 @@ block content
 
 				div.cont-cajaG-Der
 					img(src="images/Img-cajaG2.png")
-					
 
 block Scripts
 	script(type="text/javascript",src="js/index.min.js")
