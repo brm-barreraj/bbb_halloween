@@ -46,7 +46,7 @@ canvas {
   z-index: 10;
 }
 .bg-puerta {
-  background-image: url("../images/Bg-Puerta.png");
+  background-image: url("../images/Bg-Puerta.jpg");
 }
 .bg-bosque {
   background-image: url("../images/Bg-General.jpg");
@@ -330,7 +330,7 @@ h5.titulos-infor-juego {
   -moz-transform: rotate(-21deg);
   transform: rotate(-21deg);
   text-shadow: 0px 0px 2px #000;
-  left: calc(60% - 39px - 10%);
+  left: calc(50% - 39px - 5%);
   top: 60%;
 }
 .Toc-TocS2 {
@@ -342,7 +342,7 @@ h5.titulos-infor-juego {
   -moz-transform: rotate(21deg);
   transform: rotate(21deg);
   text-shadow: 0px 0px 2px #000;
-  left: calc(60% - 39px + 10%);
+  left: calc(50% - 39px + 5%);
   top: 40%;
 }
 .Toc-TocS3 {
@@ -354,7 +354,7 @@ h5.titulos-infor-juego {
   -moz-transform: rotate(-21deg);
   transform: rotate(-21deg);
   text-shadow: 0px 0px 2px #000;
-  left: calc(60% - 39px - 10%);
+  left: calc(50% - 39px - 10%);
   top: 34%;
 }
 .Toc-TocS4 {
@@ -366,7 +366,7 @@ h5.titulos-infor-juego {
   -moz-transform: rotate(21deg);
   transform: rotate(21deg);
   text-shadow: 0px 0px 2px #000;
-  left: calc(60% - 39px);
+  left: calc(50% - 39px);
   top: 440px;
 }
 .cont-tips-juego {
@@ -449,10 +449,10 @@ h5.titulos-infor-juego {
   z-index: 1;
 }
 .cont-GFantasma {
-  width: 900px;
-  left: calc(50% - 450px);
+  width: 700px;
+  left: calc(50% - 350px);
   position: absolute;
-  bottom: -60%;
+  bottom: -85%;
   z-index: 1;
 }
 .cont-WAjos {
@@ -585,6 +585,9 @@ p.text-btn-jugarII {
   float: left;
   text-align: center;
   width: 46%;
+}
+.cont-regis-confirmacion input {
+  font-family: arial;
 }
 h3.titulo-registrados {
   color: #000;
@@ -2766,5 +2769,51 @@ form.registro-finalH input.btn-enviar-regis:hover {
   }
   to {
     background-position: 160px 0;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 1023px) {
+  .cont-bienvenida-mobile-H {
+    display: block;
+  }
+  .cont-bienvenida-H {
+    display: none;
+  }
+  .conte-BBB-LogoH {
+    left: 40%;
+    top: 55%;
+    width: 20%;
+  }
+  .cont-nombre-hallowen {
+    left: 35%;
+    top: calc(55% + 80px);
+  }
+  .cont-titulos-HW {
+    width: 70%;
+  }
+  .cont-sync-actividad {
+    display: none;
+  }
+  .cont-ranking {
+    display: none;
+  }
+  .cont-bienvenida-desktop-H {
+    display: none;
+  }
+  .cont-Sync {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+  .cont-bienvenida-H {
+    display: block;
+  }
+  .cont-bienvenida-mobile-H {
+    display: none;
+  }
+  .cont-bienvenida-desktop-H {
+    display: block;
+  }
+  .cont-Sync {
+    display: none;
   }
 }

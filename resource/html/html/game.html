@@ -508,7 +508,7 @@
             <select name="departamento" id="departamento">
               <option value="0">Departamento</option>
               {#foreach from=$departamentos item=dpto#}
-              {#$idDpto = $dpto->id#}
+              {#assign var="idDpto" value=$dpto->id#}
               <option value="{#$idDpto#}">{#$dpto->nombre#}</option>{#/foreach#}
             </select>
             <select name="idCiudadAcudiente" id="idCiudadAcudiente" disabled="disabled">
@@ -630,6 +630,16 @@
       <div class="cont-porcentaje-carga">
         <h3></h3>
       </div>
+    </div>
+  </section>
+  <section class="cont-bienvenida-mobile-H hiden">
+    <div class="row">
+      <div class="cont-titulos-HW">
+        <h1>
+           Corre a tu computador y abre este enlace </h1><em class="subtitulo-principal">lo necesitarás para jugar</em>
+      </div>
+      <div class="conte-BBB-LogoH"><img class="img-responsive" src="images/Img-BBBLogo.png" alt=""></div>
+      <div class="cont-nombre-hallowen"><img class="img-responsive" src="images/Img-LogoHallow.png" alt="El dulce más buscado"></div>
     </div>
   </section>
   <!--Footer-->

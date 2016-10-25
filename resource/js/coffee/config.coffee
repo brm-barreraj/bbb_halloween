@@ -108,7 +108,7 @@
 						"nameactionweb":"canvas"
 						"percentageaction":25
 						"interactions":1
-						"titleAction": "Derrotaste a la bruja y ahora tienes más Bon Bon Bum. Sólo debes caminar un poco más para llegar a casa."
+						"titleAction": "Dejaste a la bruja sin Bon Bon Bum. Ahora sólo debes caminar un poco más para llegar a casa."
 						"from":0
 						#"to":30
 						"to":209

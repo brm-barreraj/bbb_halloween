@@ -1,4 +1,6 @@
 (function() {
+  $("body").addClass("bg-ranking");
+
   $(document).ready(function() {
     if (statusUser("bbb%h_da/t4")) {
       $("#position").show();

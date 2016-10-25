@@ -3,8 +3,17 @@ extends partials/base
 block title
 	title El Dulce Más Buscado - Bon Bon Bum
 
+block Styles
+	style(type="text/css").
+		body {
+			background-image: url('images/Bg-Ranking.jpg')!important
+		}
+		.cont-logo-BBB{
+			display: none;
+		}
+
 block content
-	section
+	section.cont-ranking
 		div.cont-titulos-HW
 				h1.titulo-ranking.
 					 bien hecho, disfruta del dulce más buscado,
@@ -62,5 +71,22 @@ block content
 			div.cont-logoBBB-PeII
 				img.img-responsive(src="images/Img-LogoBBB.png", alt="")
 
+	section.cont-bienvenida-mobile-H.hiden
+		div.row
+
+			div.cont-titulos-HW
+				h1 
+					|Corre a tu computador y abre este enlace 
+
+				em.subtitulo-principal
+
+					|lo necesitarás para jugar
+			
+			div.conte-BBB-LogoH
+				img.img-responsive(src="images/Img-BBBLogo.png", alt="")
+
+			div.cont-nombre-hallowen
+				img.img-responsive(src="images/Img-LogoHallow.png", alt="El dulce más buscado")
+				
 block Scripts
 	script(type="text/javascript",src="js/ranking.min.js")

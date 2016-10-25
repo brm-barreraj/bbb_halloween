@@ -1,3 +1,5 @@
+$("body").addClass "bg-ranking"
+
 $(document).ready ->
     if statusUser("bbb%h_da/t4")
         $("#position").show()
