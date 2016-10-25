@@ -181,7 +181,7 @@
       },
       finalize: function() {
         $(".cont-info-camino").hide();
-        $("canvas").remove();
+        $("canvas").hide();
         return console.log("Finalize action canvas");
       }
     };

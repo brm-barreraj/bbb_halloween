@@ -106,7 +106,7 @@ class @ActionsWeb
 			@canvasWeb.runAction percentage
 		finalize: =>
 			$(".cont-info-camino").hide()
-			$("canvas").remove()
+			$("canvas").hide()
 			console.log "Finalize action canvas"
 
 	playAction:

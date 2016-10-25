@@ -15,7 +15,7 @@ footer.container-fluid
 			img.img-responsive(src="images/Img-LogoBBB.png", alt="")
 
 ///-Footer
-
+|{#assign var='random' value=1|rand:20000#}
 //Scripts
 //-Estos son los scripts que van en todos los htmls del desarrollo
 script(type="text/javascript",src="js/libs/jquery.min.js")
@@ -23,6 +23,6 @@ script(src='js/libs/jquery.validate.min.js')
 script(src='js/libs/bootstrap.min.js')
 script(src="https://sbbb-julian10404.c9users.io/socket.io/socket.io.js")
 //script(src="http://104.36.19.174:3000/socket.io/socket.io.js")
-script(type="text/javascript",src="js/functions.min.js")
-script(type="text/javascript",src="js/config.min.js")
-script(type="text/javascript",src="js/main.min.js")
+script(type="text/javascript",src="js/functions.min.js?{#$random#}")
+script(type="text/javascript",src="js/config.min.js?{#$random#}")
+script(type="text/javascript",src="js/main.min.js?{#$random#}")
