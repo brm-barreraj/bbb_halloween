@@ -61,8 +61,6 @@ class @ClientWeb extends Main
 			width:progressWidth+"%"
 		
 	endActions:->
-		window.onbeforeunload = null;
-		window.location.href = "./ranking";
 		console.log "endActions"
 
 	endStages:->

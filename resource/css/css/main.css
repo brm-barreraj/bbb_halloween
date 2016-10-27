@@ -490,7 +490,7 @@ h5.titulos-infor-juego {
   width: 700px;
   left: calc(50% - 350px);
   position: absolute;
-  bottom: -85%;
+  top: 20%;
   z-index: 1;
 }
 .cont-WAjos {

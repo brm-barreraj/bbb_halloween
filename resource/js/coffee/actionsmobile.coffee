@@ -107,9 +107,9 @@ class @ActionsMobile
 				percentage = percentage + "&play"
 				ClientMobile.runAction(percentage)
 		finalize:=>
-			recreateNode document.getElementById('btn-init-throw'), true
 			$('.con-play-action').hide()
-
+			recreateNode document.getElementById('btn-init-throw'), true
+			
 	walk:
 		init:->
 			@status = 0
@@ -140,6 +140,7 @@ class @ActionsMobile
 
 	shake:
 		init:->
+			$(".con-play-action").addClass("hidden");
 			$('.con-fantasma').show()
 			myShakeEvent = new Shake
 			    threshold: 15

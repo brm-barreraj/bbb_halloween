@@ -434,6 +434,10 @@
           point: ActionsWeb.points
         };
         sendAjax("actions.php", "setGame", data);
+        setTimeout(function() {
+          window.onbeforeunload = null;
+          return window.location.href = "./ranking";
+        }, 1000);
         $(".time").hide();
         return $(".cont-info-fantasma").hide();
       }

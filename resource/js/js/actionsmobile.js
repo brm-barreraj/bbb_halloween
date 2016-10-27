@@ -196,8 +196,8 @@
         });
       },
       finalize: function() {
-        recreateNode(document.getElementById('btn-init-throw'), true);
-        return $('.con-play-action').hide();
+        $('.con-play-action').hide();
+        return recreateNode(document.getElementById('btn-init-throw'), true);
       }
     };
 
@@ -246,6 +246,7 @@
     ActionsMobile.prototype.shake = {
       init: function() {
         var myShakeEvent;
+        $(".con-play-action").addClass("hidden");
         $('.con-fantasma').show();
         myShakeEvent = new Shake({
           threshold: 15,

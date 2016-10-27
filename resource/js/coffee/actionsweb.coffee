@@ -296,5 +296,9 @@ class @ActionsWeb
 				idUser: getUser("id")
 				point: @points
 			sendAjax("actions.php","setGame",data);
+			setTimeout ->
+				window.onbeforeunload = null;
+				window.location.href = "./ranking";
+			,1000
 			$(".time").hide()
 			$(".cont-info-fantasma").hide()

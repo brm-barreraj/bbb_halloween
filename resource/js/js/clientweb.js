@@ -85,8 +85,6 @@
     };
 
     ClientWeb.prototype.endActions = function() {
-      window.onbeforeunload = null;
-      window.location.href = "./ranking";
       return console.log("endActions");
     };
 
