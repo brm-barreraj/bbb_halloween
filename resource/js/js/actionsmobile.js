@@ -108,6 +108,7 @@
             case "swipeHorizontal":
               data = ev.type.replace("swipe", "");
               console.log(data, "swipeHorizontal");
+              data = data + "&bruja";
               break;
             case "swipeThrow":
               console.log(ev.angle, "swipeThrow");
@@ -120,10 +121,12 @@
                 } else if (angle >= 120 && angle < 180) {
                   data = "left";
                 }
+                data = data + "&dracula";
               }
               break;
             case "tap":
               data = ClientMobile.getAttrConf("percentageaction");
+              data = data + "&puerta";
           }
           return ClientMobile.runAction(data);
         });
@@ -188,6 +191,7 @@
         return mc.on("tap", function(ev) {
           var percentage;
           percentage = ClientMobile.getAttrConf("percentageaction");
+          percentage = percentage + "&play";
           return ClientMobile.runAction(percentage);
         });
       },
@@ -215,6 +219,7 @@
             if (_this.status === 0) {
               _this.status = 1;
               percentage = ClientMobile.getAttrConf("percentageaction");
+              percentage = percentage + "&caminar";
               return ClientMobile.runAction(percentage);
             }
           };
@@ -225,6 +230,7 @@
             if (_this.status === 1) {
               _this.status = 0;
               percentage = ClientMobile.getAttrConf("percentageaction");
+              percentage = percentage + "&caminar";
               return ClientMobile.runAction(percentage);
             }
           };
@@ -247,8 +253,9 @@
         });
         myShakeEvent.start();
         return window.addEventListener('shake', function() {
-          var data;
-          data = ClientMobile.getAttrConf("percentageaction");
+          var data, percentage;
+          percentage = ClientMobile.getAttrConf("percentageaction");
+          data = percentage + "&fantasma";
           return ClientMobile.runAction(data);
         }, false);
       },

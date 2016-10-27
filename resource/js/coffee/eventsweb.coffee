@@ -35,8 +35,7 @@ interval = setInterval ->
 	if ClientWeb.codeSynch > 0
 		clearInterval(interval)
 	else
-		animate ".img-sync-cel","wobble"
-		animate ".cont-codigo-sync","wobble"
+		animate ".sync-celular","wobble"
 ,200
 
 $(window).on "load", ->

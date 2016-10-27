@@ -127,22 +127,60 @@ h3.pasos-int-syncII {
   font-size: 2.5rem;
   text-align: center;
   text-shadow: 0px 0px 4px #f47a20;
-  margin-left: 23%;
+  margin: 19% 0 0 23%;
   width: 55%;
 }
 .margindiv {
   margin-top: 38px;
 }
 .img-sync-cel {
-  margin-left: 28%;
+  width: 250px;
+  margin-left: calc(50% - 125px);
+  margin-top: 10px;
+}
+.sync-cajas-lados img {
+  height: 650px;
+  width: 268px;
+}
+.sync-cajas-centro {
+  height: 577px !important;
+}
+.sync-cel-url {
+  font-size: 12px !important;
+  font-family: arial !important;
+  font-weight: bold !important;
+  margin: 30% 0 0 10%;
+}
+.sync-cel-code {
+  width: 106px !important;
+  margin-left: calc(50% - 53px);
+  margin-top: 10%;
+}
+.sync-celular {
+  background: url("../images/Img-SyncCelJoin.png") no-repeat;
+  -webkit-background-size: 284px 451px;
+  -moz-background-size: 284px 451px;
+  background-size: 284px 451px;
+  width: 284px;
+  height: 100%;
+  margin-left: calc(50% - 142px);
+  margin-top: 10px;
+}
+.img-caja-large {
+  width: 227px;
+  height: 460px;
 }
 .cont-codigo-sync {
   background-image: url("../images/Img-SyncCelB.png");
   background-repeat: no-repeat;
   display: inline-block;
-  height: 224px;
-  margin-left: 28%;
-  width: 234px;
+  width: 329px;
+  margin-left: calc(50% - 163px);
+  margin-top: -18%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 369px;
 }
 h4.titulos-infor-juego {
   color: #000;
@@ -653,7 +691,6 @@ input.codigo.sync {
   font-family: Edo, sans-serif;
   font-size: 3.2rem;
   height: 40px;
-  margin: 20% 0 0 10%;
   text-align: center;
   width: 80%;
 }
@@ -766,21 +803,22 @@ form.registro-finalH input.btn-enviar-regis:hover {
 }
 .cont-cajaD .cont-cajaDS-Center {
   background-color: rgba(255,255,255,0.5);
-  -webkit-box-shadow: 0 6px 8px -8px #000;
-  box-shadow: 0 6px 8px -8px #000;
   height: 247px;
   margin-top: 34px;
   width: 46%;
 }
 .cont-cajaD .cont-cajaDS2-Center {
-  background-color: rgba(255,255,255,0.5);
-  -webkit-box-shadow: 0 6px 8px -8px #000;
-  box-shadow: 0 6px 8px -8px #000;
-  height: 315px;
+  background: -o-linear-gradient(top, rgba(255,255,255,0.5) 15%, rgba(255,255,255,0.59) 51%, rgba(255,255,255,0.29) 81%, rgba(255,255,255,0) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 15%, rgba(255,255,255,0.59) 51%, rgba(255,255,255,0.29) 81%, rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 15%, rgba(255,255,255,0.59) 51%, rgba(255,255,255,0.29) 81%, rgba(255,255,255,0) 100%);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.5) 15%, rgba(255,255,255,0.59) 51%, rgba(255,255,255,0.29) 81%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0.5) 15%, rgba(255,255,255,0.59) 51%, rgba(255,255,255,0.29) 81%, rgba(255,255,255,0) 100%);
+  height: 408px;
   width: 46%;
-}
-.paso2-sync {
-  margin-top: 15px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 .cont-caja-titulos {
   margin: 3% 0 0 19%;

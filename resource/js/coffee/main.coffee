@@ -33,3 +33,12 @@ class @Main
 
 	increaseInteraction:->
 		@interaction++
+	
+	emitClient:(to,emitName,dataAction)->
+		data =
+			idSocket: @idSocketUser
+			to: to
+			emitName: emitName
+			data: JSON.stringify(dataAction)
+		data2 ="123"
+		@socket.emit 'send',data2

@@ -25,7 +25,7 @@
     };
 
     ClientWeb.prototype.endLoaderCanvas = function() {
-      return this.socket.emit('send', this.idSocketUser, 'c2', 'endLoaderCanvas', null);
+      return this.socket.emit('endLoaderCanvas', this.codeSynch);
     };
 
     ClientWeb.prototype.initializeAction = function() {
@@ -44,7 +44,7 @@
     };
 
     ClientWeb.prototype.nextInteraction = function() {
-      this.socket.emit('send', this.idSocketUser, 'c2', 'nextInteraction', null);
+      this.socket.emit('nextInteraction', this.codeSynch);
       this.increaseInteraction();
       console.log(this.interaction, "@Interaction");
       if (this.interaction === this.getAttrConf("interactions")) {

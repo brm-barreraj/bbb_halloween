@@ -103,7 +103,11 @@ class @ActionsWeb
 				ext: @clientWeb.getAttrConf "ext"
 			@canvasWeb.init data
 		run:(percentage) =>
-			@canvasWeb.runAction percentage
+			data = percentage.split('&')
+			percentage = parseInt data[0]
+			nameCond = data[1]
+			if nameCond == "caminar"
+				@canvasWeb.runAction percentage
 		finalize: =>
 			$(".cont-info-camino").hide()
 			$("canvas").hide()
@@ -115,10 +119,14 @@ class @ActionsWeb
 			message "Dale iniciar en tu móvil para continuar jugando",null
 			console.log "playAction"
 		run:(percentage)=>
-			@percAccumulated+=percentage
-			if @percAccumulated >= 100
-				@percAccumulated = 0
-				@clientWeb.nextInteraction()
+			data = percentage.split('&')
+			percentage = parseInt data[0]
+			nameCond = data[1]
+			if nameCond == "play"
+				@percAccumulated+=percentage
+				if @percAccumulated >= 100
+					@percAccumulated = 0
+					@clientWeb.nextInteraction()
 		finalize: =>
 			hideMessage()
 			console.log "playAction"
@@ -132,14 +140,18 @@ class @ActionsWeb
 			@percAccumulated = 0
 			@tocAccumulated = 1
 		run:(percentage)=>
-			$(".Toc-TocS"+@tocAccumulated).show().delay(400).fadeOut(400);
-			animate ".Toc-TocS"+@tocAccumulated,"zoomIn"
-			@tocAccumulated++
-			@percAccumulated+=percentage
-			if @percAccumulated >= 100
-				@percAccumulated = 0
-				@tocAccumulated = 1
-				@clientWeb.nextInteraction()
+			data = percentage.split('&')
+			percentage = parseInt data[0]
+			nameCond = data[1]
+			if nameCond == "puerta"
+				$(".Toc-TocS"+@tocAccumulated).show().delay(400).fadeOut(400);
+				animate ".Toc-TocS"+@tocAccumulated,"zoomIn"
+				@tocAccumulated++
+				@percAccumulated+=percentage
+				if @percAccumulated == 100
+					@percAccumulated = 0
+					@tocAccumulated = 1
+					@clientWeb.nextInteraction()
 		finalize: =>
 			console.log "finalize door"
 			$(".cont-info-puerta").hide()
@@ -174,19 +186,23 @@ class @ActionsWeb
 				time-=1
 			,1000
 		run:(direction)=>
-			$("#object-hit").addClass "move-object-"+direction
-			setTimeout =>
-				$("#object-hit").removeClass "move-object-"+direction
-				$("#object-hit").addClass "move-object-init"
-				if direction == @classMove
-					$("#bruja1").hide()
-					$("#bruja2").show()
-					setTimeout ->
-						$("#bruja1").show()
-						$("#bruja2").hide()
-					,400
-					@addPoint()
-			,1000
+			data = direction.split('&')
+			direction = data[0]
+			nameCond = data[1]
+			if nameCond == "bruja"
+				$("#object-hit").addClass "move-object-"+direction
+				setTimeout =>
+					$("#object-hit").removeClass "move-object-"+direction
+					$("#object-hit").addClass "move-object-init"
+					if direction == @classMove
+						$("#bruja1").hide()
+						$("#bruja2").show()
+						setTimeout ->
+							$("#bruja1").show()
+							$("#bruja2").hide()
+						,400
+						@addPoint()
+				,1000
 		finalize: =>
 			$(".time").hide()
 			$(".cont-info-bruja").hide()
@@ -218,20 +234,24 @@ class @ActionsWeb
 				time-=1
 			,1000
 		run:(direction)=>
-			console.log direction,"run init"
-			$("#object-throw").addClass "throw-character-"+direction
-			setTimeout =>
-				$("#object-throw").removeClass "throw-character-"+direction
-				$("#object-throw").addClass "throw-character-init"
-				if direction == @classMove
-					$("#dracula1").hide()
-					$("#dracula2").show()
-					setTimeout ->
-						$("#dracula1").show()
-						$("#dracula2").hide()
-					,400
-					@addPoint()
-			,1000
+			data = direction.split('&')
+			direction = data[0]
+			nameCond = data[1]
+			if nameCond == "dracula"
+				console.log direction,"run init"
+				$("#object-throw").addClass "throw-character-"+direction
+				setTimeout =>
+					$("#object-throw").removeClass "throw-character-"+direction
+					$("#object-throw").addClass "throw-character-init"
+					if direction == @classMove
+						$("#dracula1").hide()
+						$("#dracula2").show()
+						setTimeout ->
+							$("#dracula1").show()
+							$("#dracula2").hide()
+						,400
+						@addPoint()
+				,1000
 			
 		finalize: =>
 			$(".time").hide()
@@ -256,17 +276,21 @@ class @ActionsWeb
 				time-=1
 			,1000
 		run:(percentage)=>
-			$("#info-time-fantasma").fadeOut(4000)
-			$("#img-opacity").animate
-				opacity: "-=0."+percentage
-			,2000
-			@addPoint()
-			@percAccumulated+=percentage
-			if @percAccumulated >= 100
-				setTimeout ->
-					@percAccumulated = 0
-					@clientWeb.nextInteraction()
-				,1500
+			data = percentage.split('&')
+			percentage = parseInt data[0]
+			nameCond = data[1]
+			if nameCond == "fantasma"
+				$("#info-time-fantasma").fadeOut(4000)
+				$("#img-opacity").animate
+					opacity: "-=0."+percentage
+				,2000
+				@addPoint()
+				@percAccumulated+=percentage
+				if @percAccumulated == 100
+					setTimeout ->
+						@percAccumulated = 0
+						@clientWeb.nextInteraction()
+					,1500
 		finalize: =>
 			data = 
 				idUser: getUser("id")
@@ -274,5 +298,3 @@ class @ActionsWeb
 			sendAjax("actions.php","setGame",data);
 			$(".time").hide()
 			$(".cont-info-fantasma").hide()
-
-

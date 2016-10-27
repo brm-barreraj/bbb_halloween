@@ -57,9 +57,10 @@
     ClientMobile.prototype.runAction = function(percentage) {
       var data;
       data = {
-        'percentage': percentage
+        'percentage': percentage,
+        'idSocket': this.idSocketUser
       };
-      return this.socket.emit('send', this.idSocketUser, 'c1', 'runAction', data);
+      return this.socket.emit('runAction', data);
     };
 
     ClientMobile.prototype.nextInteraction = function() {

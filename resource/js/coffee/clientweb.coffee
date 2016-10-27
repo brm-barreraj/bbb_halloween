@@ -13,7 +13,7 @@ class @ClientWeb extends Main
 		$("#codeWeb").val code
 		
 	endLoaderCanvas:()->
-		@socket.emit 'send',@idSocketUser,'c2','endLoaderCanvas',null
+		@socket.emit 'endLoaderCanvas', @codeSynch
 
 	initializeAction:->
 		window.onbeforeunload =()->
@@ -28,7 +28,8 @@ class @ClientWeb extends Main
 		@actionsWeb.exec @getAttrConf("nameactionweb"),"run",data.percentage
 
 	nextInteraction:->
-		@socket.emit 'send',@idSocketUser,'c2','nextInteraction',null
+		@socket.emit 'nextInteraction', @codeSynch
+		
 		@increaseInteraction()
 		console.log @interaction,"@Interaction"
 		if @interaction == @getAttrConf "interactions"

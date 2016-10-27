@@ -177,7 +177,13 @@
         return ActionsWeb.canvasWeb.init(data);
       },
       run: function(percentage) {
-        return ActionsWeb.canvasWeb.runAction(percentage);
+        var data, nameCond;
+        data = percentage.split('&');
+        percentage = parseInt(data[0]);
+        nameCond = data[1];
+        if (nameCond === "caminar") {
+          return ActionsWeb.canvasWeb.runAction(percentage);
+        }
       },
       finalize: function() {
         $(".cont-info-camino").hide();
@@ -193,10 +199,16 @@
         return console.log("playAction");
       },
       run: function(percentage) {
-        ActionsWeb.percAccumulated += percentage;
-        if (ActionsWeb.percAccumulated >= 100) {
-          ActionsWeb.percAccumulated = 0;
-          return ActionsWeb.clientWeb.nextInteraction();
+        var data, nameCond;
+        data = percentage.split('&');
+        percentage = parseInt(data[0]);
+        nameCond = data[1];
+        if (nameCond === "play") {
+          ActionsWeb.percAccumulated += percentage;
+          if (ActionsWeb.percAccumulated >= 100) {
+            ActionsWeb.percAccumulated = 0;
+            return ActionsWeb.clientWeb.nextInteraction();
+          }
         }
       },
       finalize: function() {
@@ -216,14 +228,20 @@
         return ActionsWeb.tocAccumulated = 1;
       },
       run: function(percentage) {
-        $(".Toc-TocS" + ActionsWeb.tocAccumulated).show().delay(400).fadeOut(400);
-        animate(".Toc-TocS" + ActionsWeb.tocAccumulated, "zoomIn");
-        ActionsWeb.tocAccumulated++;
-        ActionsWeb.percAccumulated += percentage;
-        if (ActionsWeb.percAccumulated >= 100) {
-          ActionsWeb.percAccumulated = 0;
-          ActionsWeb.tocAccumulated = 1;
-          return ActionsWeb.clientWeb.nextInteraction();
+        var data, nameCond;
+        data = percentage.split('&');
+        percentage = parseInt(data[0]);
+        nameCond = data[1];
+        if (nameCond === "puerta") {
+          $(".Toc-TocS" + ActionsWeb.tocAccumulated).show().delay(400).fadeOut(400);
+          animate(".Toc-TocS" + ActionsWeb.tocAccumulated, "zoomIn");
+          ActionsWeb.tocAccumulated++;
+          ActionsWeb.percAccumulated += percentage;
+          if (ActionsWeb.percAccumulated === 100) {
+            ActionsWeb.percAccumulated = 0;
+            ActionsWeb.tocAccumulated = 1;
+            return ActionsWeb.clientWeb.nextInteraction();
+          }
         }
       },
       finalize: function() {
@@ -272,20 +290,26 @@
         }, 1000);
       },
       run: function(direction) {
-        $("#object-hit").addClass("move-object-" + direction);
-        return setTimeout(function() {
-          $("#object-hit").removeClass("move-object-" + direction);
-          $("#object-hit").addClass("move-object-init");
-          if (direction === ActionsWeb.classMove) {
-            $("#bruja1").hide();
-            $("#bruja2").show();
-            setTimeout(function() {
-              $("#bruja1").show();
-              return $("#bruja2").hide();
-            }, 400);
-            return ActionsWeb.addPoint();
-          }
-        }, 1000);
+        var data, nameCond;
+        data = direction.split('&');
+        direction = data[0];
+        nameCond = data[1];
+        if (nameCond === "bruja") {
+          $("#object-hit").addClass("move-object-" + direction);
+          return setTimeout(function() {
+            $("#object-hit").removeClass("move-object-" + direction);
+            $("#object-hit").addClass("move-object-init");
+            if (direction === ActionsWeb.classMove) {
+              $("#bruja1").hide();
+              $("#bruja2").show();
+              setTimeout(function() {
+                $("#bruja1").show();
+                return $("#bruja2").hide();
+              }, 400);
+              return ActionsWeb.addPoint();
+            }
+          }, 1000);
+        }
       },
       finalize: function() {
         $(".time").hide();
@@ -329,21 +353,27 @@
         }, 1000);
       },
       run: function(direction) {
-        console.log(direction, "run init");
-        $("#object-throw").addClass("throw-character-" + direction);
-        return setTimeout(function() {
-          $("#object-throw").removeClass("throw-character-" + direction);
-          $("#object-throw").addClass("throw-character-init");
-          if (direction === ActionsWeb.classMove) {
-            $("#dracula1").hide();
-            $("#dracula2").show();
-            setTimeout(function() {
-              $("#dracula1").show();
-              return $("#dracula2").hide();
-            }, 400);
-            return ActionsWeb.addPoint();
-          }
-        }, 1000);
+        var data, nameCond;
+        data = direction.split('&');
+        direction = data[0];
+        nameCond = data[1];
+        if (nameCond === "dracula") {
+          console.log(direction, "run init");
+          $("#object-throw").addClass("throw-character-" + direction);
+          return setTimeout(function() {
+            $("#object-throw").removeClass("throw-character-" + direction);
+            $("#object-throw").addClass("throw-character-init");
+            if (direction === ActionsWeb.classMove) {
+              $("#dracula1").hide();
+              $("#dracula2").show();
+              setTimeout(function() {
+                $("#dracula1").show();
+                return $("#dracula2").hide();
+              }, 400);
+              return ActionsWeb.addPoint();
+            }
+          }, 1000);
+        }
       },
       finalize: function() {
         $(".time").hide();
@@ -378,17 +408,23 @@
         }, 1000);
       },
       run: function(percentage) {
-        $("#info-time-fantasma").fadeOut(4000);
-        $("#img-opacity").animate({
-          opacity: "-=0." + percentage
-        }, 2000);
-        ActionsWeb.addPoint();
-        ActionsWeb.percAccumulated += percentage;
-        if (ActionsWeb.percAccumulated >= 100) {
-          return setTimeout(function() {
-            this.percAccumulated = 0;
-            return this.clientWeb.nextInteraction();
-          }, 1500);
+        var data, nameCond;
+        data = percentage.split('&');
+        percentage = parseInt(data[0]);
+        nameCond = data[1];
+        if (nameCond === "fantasma") {
+          $("#info-time-fantasma").fadeOut(4000);
+          $("#img-opacity").animate({
+            opacity: "-=0." + percentage
+          }, 2000);
+          ActionsWeb.addPoint();
+          ActionsWeb.percAccumulated += percentage;
+          if (ActionsWeb.percAccumulated === 100) {
+            return setTimeout(function() {
+              this.percAccumulated = 0;
+              return this.clientWeb.nextInteraction();
+            }, 1500);
+          }
         }
       },
       finalize: function() {

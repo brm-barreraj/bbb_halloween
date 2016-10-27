@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-10-25 17:20:52
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-10-27 22:02:00
          compiled from "./templates/ranking.html" */ ?>
 <?php /*%%SmartyHeaderCode:226342574580be98ac01448-04090136%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'aa82d7164065ff2420699642c0529a5e44e507b6' => 
     array (
       0 => './templates/ranking.html',
-      1 => 1477414896,
+      1 => 1477604938,
       2 => 'file',
     ),
   ),
@@ -48,7 +48,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  src="//html5shiv.googlecode.com/svn/trunk/html5.js"><?php echo '</script'; ?>
 >
 <![endif]--><?php echo '<script'; ?>
- src="js/libs/modernizr-2.6.2.min.js"><?php echo '</script'; ?>
+ type="text/javascript" src="js/libs/modernizr-2.6.2.min.js"><?php echo '</script'; ?>
 ></head><body class="bg-bosque box" id="box-action"><section class="cont-ranking"><div class="cont-titulos-HW"><h1 class="titulo-ranking"> bien hecho, disfruta del dulce más buscado,</h1><em class="subtitulo-principal">el delicioso bon bon bum morazulfresh.
 </em></div><div class="cont-fondo-G" style="margin-top:0px"><div class="cont-cajaG-Iz"><img src="images/Img-cajaG1.png"></div><div class="cont-cajaG-Center"><div class="hiden" id="position"><h2 class="titulo-posicion-H">tu posición
 </h2><p class="text-mi-resultado">69
@@ -69,15 +69,15 @@ $_smarty_tpl->tpl_vars['rank']->_loop = true;
 <?php echo $_smarty_tpl->tpl_vars['rank']->value->puntaje;?>
 
 <?php }?>
-</td></tr><?php } ?></tbody></table></div><h2 class="titulo-fin-rank"><a href="./game">Sigue jugando para acumular más puntos. </a></h2></div><div class="cont-cajaG-Der"><img src="images/Img-cajaG2.png"></div><div class="cont-logoH-PeII"><img class="img-responsive" src="images/Img-LogoHallowBBB.png" alt=""></div><div class="cont-logoBBB-PeII"><img class="img-responsive" src="images/Img-LogoBBB.png" alt=""></div></div></section><section class="cont-bienvenida-mobile-H hiden"><div class="row"><div class="cont-titulos-HW"><h1> Corre a tu computador y abre este enlace </h1><em class="subtitulo-principal">lo necesitarás para jugar</em></div><div class="conte-BBB-LogoH"><img class="img-responsive" src="images/Img-BBBLogo.png" alt=""></div><div class="cont-nombre-hallowen"><img class="img-responsive" src="images/Img-LogoHallow.png" alt="El dulce más buscado"></div></div></section><!--Footer--><footer class="container-fluid"><div class="row"><div class="cont-logo-BBB"><a href="#" onClick="seguimientoEventos('footer','clic','Colombina')"><img class="img-responsive" src="images/Img-LogoBBB.png" title="Paso 1" alt="Paso 1"/></a></div><div class="cont-logoH-Pe hiden"><img class="img-responsive" src="images/Img-LogoHallowBBB.png" alt=""></div><div class="cont-logoBBB-Pe hiden"><img class="img-responsive" src="images/Img-LogoBBB.png" alt=""></div></div></footer><!--/-Footer--><?php $_smarty_tpl->tpl_vars['random'] = new Smarty_variable(rand(1,20), null, 0);?><!--Scripts--><?php echo '<script'; ?>
+</td></tr><?php } ?></tbody></table></div><h2 class="titulo-fin-rank"><a href="./game">Sigue jugando para acumular más puntos. </a></h2></div><div class="cont-cajaG-Der"><img src="images/Img-cajaG2.png"></div><div class="cont-logoH-PeII"><img class="img-responsive" src="images/Img-LogoHallowBBB.png" alt=""></div><div class="cont-logoBBB-PeII"><img class="img-responsive" src="images/Img-LogoBBB.png" alt=""></div></div></section><section class="cont-bienvenida-mobile-H hiden"><div class="row"><div class="cont-titulos-HW"><h1> Corre a tu computador y abre este enlace </h1><em class="subtitulo-principal">lo necesitarás para jugar</em></div><div class="conte-BBB-LogoH"><img class="img-responsive" src="images/Img-BBBLogo.png" alt=""></div><div class="cont-nombre-hallowen"><img class="img-responsive" src="images/Img-LogoHallow.png" alt="El dulce más buscado"></div></div></section><!--Footer--><footer class="container-fluid"><div class="row"><div class="cont-logo-BBB"><a href="#" onClick="seguimientoEventos('footer','clic','Colombina')"><img class="img-responsive" src="images/Img-LogoBBB.png" title="Paso 1" alt="Paso 1"/></a></div><div class="cont-logoH-Pe hiden"><img class="img-responsive" src="images/Img-LogoHallowBBB.png" alt=""></div><div class="cont-logoBBB-Pe hiden"><img class="img-responsive" src="images/Img-LogoBBB.png" alt=""></div></div></footer><!--/-Footer--><?php $_smarty_tpl->tpl_vars['random'] = new Smarty_variable(rand(1,20000), null, 0);?><!--Scripts--><?php echo '<script'; ?>
  type="text/javascript" src="js/libs/jquery.min.js"><?php echo '</script'; ?>
 ><?php echo '<script'; ?>
- src="js/libs/jquery.validate.min.js"><?php echo '</script'; ?>
+ type="text/javascript" src="js/libs/jquery.validate.min.js"><?php echo '</script'; ?>
 ><?php echo '<script'; ?>
- src="js/libs/bootstrap.min.js"><?php echo '</script'; ?>
+ type="text/javascript" src="js/libs/bootstrap.min.js"><?php echo '</script'; ?>
 ><?php echo '<script'; ?>
- src="https://sbbb-julian10404.c9users.io/socket.io/socket.io.js"><?php echo '</script'; ?>
-><!--script(src="http://104.36.19.174:3000/socket.io/socket.io.js")--><?php echo '<script'; ?>
+ type="text/javascript" src="https://sbbb-julian10404.c9users.io/socket.io/socket.io.js"><?php echo '</script'; ?>
+><!--script(type="text/javascript", src="http://104.36.19.174:3000/socket.io/socket.io.js")--><?php echo '<script'; ?>
  type="text/javascript" src="js/functions.min.js?<?php echo $_smarty_tpl->tpl_vars['random']->value;?>
 "><?php echo '</script'; ?>
 ><?php echo '<script'; ?>

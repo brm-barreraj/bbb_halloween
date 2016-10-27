@@ -43,6 +43,7 @@ class @ActionsMobile
 					when "swipeHorizontal"
 						data = ev.type.replace "swipe",""
 						console.log data,"swipeHorizontal"
+						data = data + "&bruja"
 					when "swipeThrow"
 						console.log ev.angle,"swipeThrow"
 						if ev.angle > -180 && ev.angle < 0
@@ -53,8 +54,10 @@ class @ActionsMobile
 								data = "center"
 							else if angle >= 120 && angle < 180
 								data = "left"
+							data = data + "&dracula"
 					when "tap"
-						data = ClientMobile.getAttrConf "percentageaction"		
+						data = ClientMobile.getAttrConf "percentageaction"	
+						data = data + "&puerta"
 				ClientMobile.runAction(data)
 
 	register:
@@ -101,6 +104,7 @@ class @ActionsMobile
 			mc = new Hammer myElement
 			mc.on "tap", (ev) =>
 				percentage = ClientMobile.getAttrConf "percentageaction"
+				percentage = percentage + "&play"
 				ClientMobile.runAction(percentage)
 		finalize:=>
 			recreateNode document.getElementById('btn-init-throw'), true
@@ -121,11 +125,13 @@ class @ActionsMobile
 				if @status==0
 					@status=1
 					percentage = ClientMobile.getAttrConf "percentageaction"
+					percentage = percentage + "&caminar"
 					ClientMobile.runAction(percentage)
 			mc2.on "tap", (ev) =>
 				if @status==1
 					@status=0
 					percentage = ClientMobile.getAttrConf "percentageaction"
+					percentage = percentage + "&caminar"
 					ClientMobile.runAction(percentage)
 		finalize:->
 			recreateNode document.getElementById('foot1'), true
@@ -140,7 +146,8 @@ class @ActionsMobile
 			    timeout: 1000
 			myShakeEvent.start()
 			window.addEventListener 'shake', ->
-				data = ClientMobile.getAttrConf "percentageaction"
+				percentage = ClientMobile.getAttrConf "percentageaction"
+				data = percentage + "&fantasma"
 				ClientMobile.runAction(data)
 			, false
 			

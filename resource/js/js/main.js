@@ -47,6 +47,18 @@
       return this.interaction++;
     };
 
+    Main.prototype.emitClient = function(to, emitName, dataAction) {
+      var data, data2;
+      data = {
+        idSocket: this.idSocketUser,
+        to: to,
+        emitName: emitName,
+        data: JSON.stringify(dataAction)
+      };
+      data2 = "123";
+      return this.socket.emit('send', data2);
+    };
+
     return Main;
 
   })();

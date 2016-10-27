@@ -102,7 +102,6 @@
     var user;
     user = getCookie("bbb%h_da/t4") ? getCookie("bbb%h_da/t4") : localStorage.getItem("bbb%h_da/t4");
     user = JSON.parse(user);
-    console.log(user, "user");
     if (user && user !== void 0 && user !== null) {
       if (user.id !== void 0 && user.id !== "" && user.correo !== "") {
         return true;

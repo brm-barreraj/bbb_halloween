@@ -39,7 +39,9 @@ class @ClientMobile extends Main
 	runAction:(percentage)->
 		data =
 			'percentage' : percentage
-		@socket.emit 'send',@idSocketUser,'c1','runAction',data
+			'idSocket': @idSocketUser
+		@socket.emit 'runAction', data
+		
 
 	nextInteraction:->
 		@increaseInteraction()

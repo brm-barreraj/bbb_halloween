@@ -38,8 +38,7 @@
     if (ClientWeb.codeSynch > 0) {
       return clearInterval(interval);
     } else {
-      animate(".img-sync-cel", "wobble");
-      return animate(".cont-codigo-sync", "wobble");
+      return animate(".sync-celular", "wobble");
     }
   }, 200);
 

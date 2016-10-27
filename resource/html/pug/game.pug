@@ -2,7 +2,6 @@ extends partials/base
 
 block title
 	title El Dulce Más Buscado - Bon Bon Bum
-
 block content
 
 	div.cont-alerts-HB.hiden
@@ -24,19 +23,24 @@ block content
 			include partials/Sync-text
 		div.row
 			div.cont-cajaD
-				div.cont-cajaDS-Iz
-					img(src="images/Img-cajaGD1.png")
+				div.cont-cajaDS-Iz.sync-cajas-lados
+					img(src="images/Img-cajaG1.png")
 
-				div.cont-cajaDS-Center
-					div
+				div.cont-cajaDS-Center.sync-cajas-centro
 					h3.pasos-int-sync
 						|1. ingresa a la siguente url desde tu dispositivo móvil.
-					img.img-sync-cel(src="images/Img-SyncCel.png", alt="")
+					div.sync-celular
+						div
+							input.codigo.sync.sync-cel-url(type="text",disabled="disabled",value="www.bonbonbum.com/halloween/sync")
+						div
+							h3.pasos-int-syncII
+								|2. ingresa este código.
+						div
+							input.codigo.sync#codeWeb.sync-cel-code(type="text",disabled="disabled")
+				div.cont-cajaDS-Der.sync-cajas-lados
+					img(src="images/Img-cajaG2.png")
 
-				div.cont-cajaDS-Der
-					img(src="images/Img-cajaGD2.png")
-
-		div.row.paso2-sync
+		div.row.paso2-sync.hiden
 			div.cont-cajaD
 				div.cont-cajaDS-Iz
 					img(src="images/Img-cajaGD1B.png")
@@ -208,7 +212,7 @@ block content
 		div.cont-fondo-G
 			div.cont-cajaG-Iz
 		
-					img(src="images/Img-cajaG1.png")
+				img(src="images/Img-cajaG1.png")
 
 			div.cont-cajaG-Center
 				form.registro-finalH#form-regiter
@@ -261,7 +265,8 @@ block content
 							input.check-terminos(type="checkbox",id="terms")
 							p
 								|Acepto los
-								a(href="./documents/terminosycondiciones.pdf")(target="_blank") |términos y condiciones
+								a(href="./documents/terminosycondiciones.pdf")(target="_blank") 
+									|términos y condiciones
 						div.clear
 						div
 							input.check-terminos(type="checkbox")

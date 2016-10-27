@@ -75,7 +75,6 @@
 @statusUser = ->
   user = if getCookie("bbb%h_da/t4") then getCookie("bbb%h_da/t4") else localStorage.getItem("bbb%h_da/t4")
   user = JSON.parse(user)
-  console.log user,"user"
   if  user && user != undefined && user != null
     if user.id != undefined && user.id != "" && user.correo != ""
       return true
