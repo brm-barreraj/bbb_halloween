@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-10-27 22:00:02
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-11-04 21:47:14
          compiled from "./templates/index.html" */ ?>
 <?php /*%%SmartyHeaderCode:848461492580a41ba3b5714-74988920%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'be2e61572602d8d6e2437e3db9a655fe62726aee' => 
     array (
       0 => './templates/index.html',
-      1 => 1477604938,
+      1 => 1478296008,
       2 => 'file',
     ),
   ),
@@ -49,15 +49,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </h3><div class="conte-btn-jugar"><a href="#"><img class="img-responsive" src="images/Img-PlayHN.png" alt="Jugar"><p class="text-btn-jugarII">Jugar
 </p></a></div><em class="inform-princi"> No esperes más y comienza a perseguir el dulce más buscado.
 
-</em></div></div><div class="cont-cajaG-Der"><img src="images/Img-cajaG2.png"></div></div></div></section><section class="cont-bienvenida-mobile-H hiden"><div class="row"><div class="cont-titulos-HW"><h1> Corre a tu computador y abre este enlace </h1><em class="subtitulo-principal">lo necesitarás para jugar</em></div><div class="conte-BBB-LogoH"><img class="img-responsive" src="images/Img-BBBLogo.png" alt=""></div><div class="cont-nombre-hallowen"><img class="img-responsive" src="images/Img-LogoHallow.png" alt="El dulce más buscado"></div></div></section><!--Footer--><footer class="container-fluid"><div class="row"><div class="cont-logo-BBB"><a href="#" onClick="seguimientoEventos('footer','clic','Colombina')"><img class="img-responsive" src="images/Img-LogoBBB.png" title="Paso 1" alt="Paso 1"/></a></div><div class="cont-logoH-Pe hiden"><img class="img-responsive" src="images/Img-LogoHallowBBB.png" alt=""></div><div class="cont-logoBBB-Pe hiden"><img class="img-responsive" src="images/Img-LogoBBB.png" alt=""></div></div></footer><!--/-Footer--><?php $_smarty_tpl->tpl_vars['random'] = new Smarty_variable(rand(1,20000), null, 0);?><!--Scripts--><?php echo '<script'; ?>
+</em></div></div><div class="cont-cajaG-Der"><img src="images/Img-cajaG2.png"></div></div></div></section><section class="cont-bienvenida-mobile-H hiden"><div class="row"><div class="cont-titulos-HW"><h1> Gracias por participar en la actividad para encontrar al Bon Bon Bum Morazul Fresh, el dulce más buscado de Halloween. Pronto contactaremos a los ganadores.</h1><!--h1 --><!--	|Corre a tu computador y abre este enlace --><!--em.subtitulo-principal--><!--	|lo necesitarás para jugar--></div><div class="conte-BBB-LogoH"><img class="img-responsive" src="images/Img-BBBLogo.png" alt=""></div><div class="cont-nombre-hallowen"><img class="img-responsive" src="images/Img-LogoHallow.png" alt="El dulce más buscado"></div></div></section><!--Footer--><footer class="container-fluid"><div class="row"><div class="cont-logo-BBB"><a href="#" onClick="seguimientoEventos('footer','clic','Colombina')"><img class="img-responsive" src="images/Img-LogoBBB.png" title="Paso 1" alt="Paso 1"/></a></div><div class="cont-logoH-Pe hiden"><img class="img-responsive" src="images/Img-LogoHallowBBB.png" alt=""></div><div class="cont-logoBBB-Pe hiden"><img class="img-responsive" src="images/Img-LogoBBB.png" alt=""></div></div></footer><!--/-Footer--><?php $_smarty_tpl->tpl_vars['random'] = new Smarty_variable(rand(1,20000), null, 0);?><!--Scripts--><?php echo '<script'; ?>
  type="text/javascript" src="js/libs/jquery.min.js"><?php echo '</script'; ?>
 ><?php echo '<script'; ?>
  type="text/javascript" src="js/libs/jquery.validate.min.js"><?php echo '</script'; ?>
 ><?php echo '<script'; ?>
  type="text/javascript" src="js/libs/bootstrap.min.js"><?php echo '</script'; ?>
-><?php echo '<script'; ?>
- type="text/javascript" src="https://sbbb-julian10404.c9users.io/socket.io/socket.io.js"><?php echo '</script'; ?>
-><!--script(type="text/javascript", src="http://104.36.19.174:3000/socket.io/socket.io.js")--><?php echo '<script'; ?>
+><!--script(type="text/javascript", src="https://sbbb-julian10404.c9users.io/socket.io/socket.io.js")--><!--script(type="text/javascript", src="http://104.36.19.174:3000/socket.io/socket.io.js")--><?php echo '<script'; ?>
  type="text/javascript" src="js/functions.min.js?<?php echo $_smarty_tpl->tpl_vars['random']->value;?>
 "><?php echo '</script'; ?>
 ><?php echo '<script'; ?>
@@ -67,6 +65,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  type="text/javascript" src="js/main.min.js?<?php echo $_smarty_tpl->tpl_vars['random']->value;?>
 "><?php echo '</script'; ?>
 ><!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCW2D9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) --><?php echo '<script'; ?>
+ type="text/javascript">window.location.href = "ranking";<?php echo '</script'; ?>
+><?php echo '<script'; ?>
  type="text/javascript" src="js/index.min.js?<?php echo $_smarty_tpl->tpl_vars['random']->value;?>
 "><?php echo '</script'; ?>
 ></body></html><?php }} ?>

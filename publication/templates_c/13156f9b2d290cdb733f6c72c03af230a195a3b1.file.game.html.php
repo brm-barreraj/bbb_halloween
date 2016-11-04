@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-10-27 21:49:08
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2016-11-04 21:33:29
          compiled from "./templates/game.html" */ ?>
 <?php /*%%SmartyHeaderCode:14407139315809c2373df675-34341814%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '13156f9b2d290cdb733f6c72c03af230a195a3b1' => 
     array (
       0 => './templates/game.html',
-      1 => 1477604938,
+      1 => 1478295141,
       2 => 'file',
     ),
   ),
@@ -72,6 +72,8 @@ $_smarty_tpl->tpl_vars['dpto']->_loop = true;
  type="text/javascript" src="js/main.min.js?<?php echo $_smarty_tpl->tpl_vars['random']->value;?>
 "><?php echo '</script'; ?>
 ><!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCW2D9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) --><?php echo '<script'; ?>
+ type="text/javascript">window.location.href = "ranking";<?php echo '</script'; ?>
+><?php echo '<script'; ?>
  type="text/javascript" src="js/validate.min.js?<?php echo $_smarty_tpl->tpl_vars['random']->value;?>
 "><?php echo '</script'; ?>
 ><?php echo '<script'; ?>

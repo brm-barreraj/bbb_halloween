@@ -110,11 +110,12 @@ block content
 
 			div.cont-titulos-HW
 				h1 
-					|Corre a tu computador y abre este enlace 
+					|Gracias por participar en la actividad para encontrar al Bon Bon Bum Morazul Fresh, el dulce más buscado de Halloween. Pronto contactaremos a los ganadores.
+				//	|Corre a tu computador y abre este enlace 
 
-				em.subtitulo-principal
+				//em.subtitulo-principal
 
-					|lo necesitarás para jugar
+				//	|lo necesitarás para jugar
 			
 			div.conte-BBB-LogoH
 				img.img-responsive(src="images/Img-BBBLogo.png", alt="")
@@ -123,4 +124,6 @@ block content
 				img.img-responsive(src="images/Img-LogoHallow.png", alt="El dulce más buscado")
 
 block Scripts
-	script(type="text/javascript",src="js/index.min.js?{#$random#}")
+	script(type="text/javascript")
+		|window.location.href = "ranking";
+	//script(type="text/javascript",src="js/index.min.js?{#$random#}")

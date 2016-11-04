@@ -2840,6 +2840,9 @@ form.registro-finalH input.btn-enviar-regis:hover {
   .cont-Sync {
     display: block;
   }
+  h2 {
+    font-size: 2.5rem !important;
+  }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1500px) {
   .cont-bienvenida-H {
